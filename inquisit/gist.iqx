@@ -375,7 +375,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </values>
 
 <include>
-/file = "include_surveypage_inputs.iqx"
+/file = "include_surveypage_inputs_no_validation.iqx"
 </include>
 
 
@@ -429,10 +429,6 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 	0 = fixation_cross;
 	500 = practice_stimuli;
 	633 = mask1;
-	693 = mask2;
-	753 = mask3;
-	813 = mask4;
-	873 = mask5;
 ]
 / timeout = parameters.fixationduration + 133 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -442,6 +438,7 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 	values.soa = 133
 ]
 / recorddata = true
+/ screencapture = true
 </trial>
 
 <trial practice_pic_267soa>
@@ -608,7 +605,7 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 **************************************************************************************************************
 
 <include>
-/file = "include_blocks_full.iqx"
+/file = "include_blocks_short.iqx"
 </include>
 
 <block completion>
