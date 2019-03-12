@@ -375,7 +375,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </values>
 
 <include>
-/file = "include_surveypage_inputs_no_validation.iqx"
+/file = "include_surveypage_inputs.iqx"
 </include>
 
 
@@ -608,7 +608,7 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 **************************************************************************************************************
 
 <include>
-/file = "include_blocks_short.iqx"
+/file = "include_blocks_full.iqx"
 </include>
 
 <block completion>
@@ -624,7 +624,6 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 
 <expt>
 /blocks = [1 = practice_block; 2 = block1; 3 = block2; 4 = block3; 5 = block4; 6 = completion]
-/ preinstructions = (intro)
 /onexptend = [values.completed = 1]
 </expt>
 
