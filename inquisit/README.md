@@ -22,8 +22,14 @@ The experiments built using Inquisit is declarative - i.e. no programming code r
 
 ## Steps to run the experiment using Inquisit Lab (local - not integrated with MTurk)
 
-+ Clone this repository to your local machine.
-+ Open ```gist.iqx``` file with Inquisit Lab. This is the main definition file.
-
+* Clone this repository to your local machine.
+* Open ```gist.iqx``` file with Inquisit Lab. This is the main definition file. I created this script by using one of the examples that others have created (in the tutorial) and modified from there.
+* There are several wrapper scripts (such as ```gist_imgset_1.iqx```) that wrap around ```gist.iqx```. The purpose is to define different image stimuli and the main core logic is still reusable.
+* Open ```gist_imgset_1.iqx``` and update the item ```pictures``` to contain only a handful of images (for demo purposes).
+* click the "Run" button at the top and the experiment should run on your local machine if everything is setup correctly - and images are found.
+* The experiment will prompt you for a subject id and group id - just keep the default values.
+* If you want to abandon the experiment half way, press "Command+Control+Q" on Mac.
 
 ## References
+
+* https://www.millisecond.com/support/docs/v5/html/viewer.htm#introduction.htm
