@@ -20,6 +20,8 @@ The experiments built using Inquisit is declarative - i.e. no programming code r
 
 * Get a licence for Inquisit Lab - once installed, follow the instructions to get a registration key.
 
+* Apparently there are limited licence in Monash for Inquisit Web, so we may have to share the same account. Please let me know if you need to access Inqusit Web and I can share the login details with you.
+  
 ## Steps to run the experiment using Inquisit Lab (local - not integrated with MTurk)
 
 * Clone this repository to your local machine.
@@ -29,6 +31,16 @@ The experiments built using Inquisit is declarative - i.e. no programming code r
 * click the "Run" button at the top and the experiment should run on your local machine if everything is setup correctly - and images are found.
 * The experiment will prompt you for a subject id and group id - just keep the default values.
 * If you want to abandon the experiment half way, press "Command+Control+Q" on Mac.
+
+
+## Steps to run the experiment in Inquisit Web
+
+Once you are happy with your experiment locally, then it is time to open to the world. To host your experiment on millisecond:
+
+* Login to millisecond server using Monash login.
+* Click My Account -> Web Scripts
+* Register your new script using the "Register New Script". There are many options to setup your experiment but this won't be covered here.
+* After successfully registered the web script, you will get a launch page URL and you can send this link to the participants or anyone you want to test.
 
 ## References
 
