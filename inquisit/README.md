@@ -2,6 +2,16 @@
 
 This is the main directory that contains all the necessary Inquisit files to run the gist generation experiment.
 
+## Inquisit Overview
+
+The experiments built using Inquisit is declarative - i.e. no programming code required. Inquisit has a number of pre-defined items/objects to be used in an experiment, such as picture, text, trial, block. Inquisit also has many input objects that accepts user inputs, such as textbox, radio buttons. Here is a good overview with many examples: https://www.millisecond.com/support/docs/v5/html/viewer.htm#introduction.htm.
+
+## Justification of using Inquisit for this project
+
+* Inquisit was chosen because Monash has license to it and can host Inquisit Web experiments.
+* Inquisit timing accuracy is independently tested and verified: https://www.millisecond.com/products/inquisit5/timing.aspx, saving us to measure the timing accuracy if we choose another framework such as jspsych. 
+* Integrates well with MTurk via survey link and approved by Amazon as a MTurk external platform.
+
 ## Pre-requisites
 
 ### Software
@@ -10,14 +20,10 @@ This is the main directory that contains all the necessary Inquisit files to run
 
 * Get a licence for Inquisit Lab - once installed, follow the instructions to get a registration key.
 
-### Information about Inquisit
-
-
-
-### Steps to run the experiment using Inquisit Lab (local - not integrated with MTurk)
+## Steps to run the experiment using Inquisit Lab (local - not integrated with MTurk)
 
 + Clone this repository to your local machine.
-+ Open ```gist.iqx``` file with Inquisit Lab. This is the main definition file. 
++ Open ```gist.iqx``` file with Inquisit Lab. This is the main definition file.
 
 
 ## References
