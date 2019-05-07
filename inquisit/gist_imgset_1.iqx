@@ -5,7 +5,7 @@
 **************************************************************************************************************
 
 <parameters>
-/fixationduration = 500
+/fixationduration = 1000
 /is_mturk = false
 /experiment_id = "GIST_PILOT_V0"
 </parameters>

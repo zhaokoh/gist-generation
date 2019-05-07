@@ -4,7 +4,7 @@
 SCRIPT INFO
 
 Script Author: Zhao Hui Koh (This script is based on the diary script from Millisecond Software)
-last updated: 23-02-2019 by Zhao Hui KOh (zhkoh2@student.monash.edu)
+last updated: 23-02-2019 by Zhao Hui Koh (zhkoh2@student.monash.edu)
 
 Note (by Millisecond Software):
 By default this script allows participants to move onto the next stimuli before the maximum
@@ -113,7 +113,7 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 
 <item directions>
 /1 = "Going back to the image that you just saw, what words (nouns, verbs, adjectives) would you use to describe what you saw?"
-/2 = "Going back to the image that you just saw, what words (nouns, verbs, adjectives) would you use to describe what you experienced?"
+/2 = "Referring to the image that you just saw, what words (nouns, verbs, adjectives) would you use to describe your impression of the image?"
 </item>
 
 <item labels>
@@ -265,43 +265,6 @@ Note: The following represents five masks to be used after the picture stimulus
 / fontstyle = ("Arial", 9%)
 </text>
 
-<text warn>
-/ items = directions
-/ vposition = 17
-/ size = (1000px, 25px)
-/ txbgcolor = black
-/ txcolor = white
-/select = 3
-</text>
-
-<text warn2>
-/ numitems = 1
-/ items = directions
-/ vposition = 90
-/ txcolor = white
-/ txbgcolor = black
-/select = 4
-</text>
-
-<text dir>
-/ numitems = 1
-/ items = directions
-/ vposition = 20
-/ size = (100%, 10%)
-/ txcolor = white
-/ txbgcolor = black
-/select = 1
-</text>
-
-<text dir2>
-/ numitems = 1
-/ items = directions
-/ vposition = 95
-/ txcolor = white
-/ txbgcolor = black
-/select = 2
-</text>
-
 <text survey_error2>
 / items= ("error = <% surveypage.word_generation.error %>")
 / fontstyle = ("Arial", 1.74%, true, false, false, false, 5, 0)
@@ -381,7 +344,7 @@ Note: The following represents five masks to be used after the picture stimulus
 
 NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10; 
 <surveypage word_generation>
-/ caption = "<% item.directions.item(1) %>"
+/ caption = "<% item.directions.item(2) %>"
 / subcaption = "You must enter at least 5 words and their confidence ratings to proceed."
 / subcaptionfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
 / fontstyle =  ("Arial", 3%)
@@ -407,12 +370,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial practice_pic_67soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = practice_stimuli;
-	567 = mask1;
-	627 = mask2;
-	687 = mask3;
-	747 = mask4;
-	807 = mask5;
+	1000 = practice_stimuli;
+	1067 = mask1;
+	1127 = mask2;
+	1187 = mask3;
+	1247 = mask4;
+	1307 = mask5;
 ]
 / timeout = parameters.fixationduration + 67 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -427,12 +390,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial practice_pic_133soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = practice_stimuli;
-	633 = mask1;
-	693 = mask2;
-	753 = mask3;
-	813 = mask4;
-	873 = mask5;
+	1000 = practice_stimuli;
+	1133 = mask1;
+	1193 = mask2;
+	1253 = mask3;
+	1313 = mask4;
+	1373 = mask5;
 ]
 / timeout = parameters.fixationduration + 133 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -447,12 +410,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial practice_pic_267soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = practice_stimuli;
-	767 = mask1;
-	827 = mask2;
-	887 = mask3;
-	947 = mask4;
-	1007 = mask5;
+	1000 = practice_stimuli;
+	1267 = mask1;
+	1327 = mask2;
+	1387 = mask3;
+	1447 = mask4;
+	1507 = mask5;
 ]
 / timeout = parameters.fixationduration + 267 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -467,12 +430,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial practice_pic_500soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = practice_stimuli;
-	1000 = mask1;
-	1060 = mask2;
-	1120 = mask3;
-	1180 = mask4;
-	1240 = mask5;
+	1000 = practice_stimuli;
+	1500 = mask1;
+	1560 = mask2;
+	1620 = mask3;
+	1680 = mask4;
+	1740 = mask5;
 ]
 / timeout = parameters.fixationduration + 500 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -491,12 +454,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial pic_67soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = gdg;
-	567 = mask1;
-	627 = mask2;
-	687 = mask3;
-	747 = mask4;
-	807 = mask5;
+	1000 = gdg;
+	1067 = mask1;
+	1127 = mask2;
+	1187 = mask3;
+	1247 = mask4;
+	1307 = mask5;
 ]
 / timeout = parameters.fixationduration + 67 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -511,12 +474,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial pic_133soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = gdg;
-	633 = mask1;
-	693 = mask2;
-	753 = mask3;
-	813 = mask4;
-	873 = mask5;
+	1000 = gdg;
+	1133 = mask1;
+	1193 = mask2;
+	1253 = mask3;
+	1313 = mask4;
+	1373 = mask5;
 ]
 / timeout = parameters.fixationduration + 133 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -531,12 +494,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial pic_267soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = gdg;
-	767 = mask1;
-	827 = mask2;
-	887 = mask3;
-	947 = mask4;
-	1007 = mask5;
+	1000 = gdg;
+	1267 = mask1;
+	1327 = mask2;
+	1387 = mask3;
+	1447 = mask4;
+	1507 = mask5;
 ]
 / timeout = parameters.fixationduration + 267 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -551,12 +514,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 <trial pic_500soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	500 = gdg;
-	1000 = mask1;
-	1060 = mask2;
-	1120 = mask3;
-	1180 = mask4;
-	1240 = mask5;
+	1000 = gdg;
+	1500 = mask1;
+	1560 = mask2;
+	1620 = mask3;
+	1680 = mask4;
+	1740 = mask5;
 ]
 / timeout = parameters.fixationduration + 500 + (5 * 60)
 /branch = [surveypage.word_generation]
@@ -608,8 +571,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 **************************************************************************************************************
 
 <include>
-/file = "include_blocks_full.iqx"
+/file = "include_blocks_demo.iqx"
 </include>
+
+<block consent>
+/ preinstructions = (intro)
+</block>
 
 <block completion>
 /trials = [1=mturk_completion_code]
@@ -623,7 +590,7 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 **************************************************************************************************************
 
 <expt>
-/blocks = [1 = practice_block; 2 = block1; 3 = block2; 4 = block3; 5 = block4; 6 = completion]
+/blocks = [1 = practice_block; 2 = block1; 3 = completion]
 /onexptend = [values.completed = 1]
 </expt>
 
