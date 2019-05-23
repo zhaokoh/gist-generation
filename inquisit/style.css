@@ -48,6 +48,11 @@ h1 { font-size: xx-large; }
     width: 100%;
 }
 
+.supplementary-info {
+    float: right;
+    font-size: medium;
+}
+
 #zoom_panel {
     display: none;
     z-index: 1; 

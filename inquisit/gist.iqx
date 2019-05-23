@@ -104,6 +104,10 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 </instruct>
 
 <htmlpage intro>
+/ file = "experiment_overview.html"
+</htmlpage>
+
+<htmlpage consent>
 / file = "consent_form.html"
 </htmlpage>
 
@@ -113,7 +117,14 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 
 <item directions>
 /1 = "Going back to the image that you just saw, what words (nouns, verbs, adjectives) would you use to describe what you saw?"
-/2 = "Referring to the image that you just saw, what words (nouns, verbs, adjectives) would you use to describe your impression of the image?"
+/2 = "Referring to the image that you just saw, what words would you use to describe your impression of the image?"
+</item>
+
+<item word_guidelines>
+/1 = "1. Must be a non-repeat and valid English word (more than 1 character)."
+/2 = "2. Nouns (e.g. ball, cat, apple), Verbs (e.g. run, play, jump), Adjectives (e.g. calm, exciting, beautiful)"
+/3 = "3. Please use the character '-' if you enter a phrase with spaces, for e.g. sunny-afternoon"
+/4 = "If you are unable to come up with all 5 words, please enter arbitrary words and select the button 'Don't Know' for the rest."
 </item>
 
 <item labels>
@@ -252,7 +263,7 @@ Note: The following represents five masks to be used after the picture stimulus
 /select = noreplacenorepeat
 /position = (50%, 50%)
 / width = 100
-/ height = 100
+/ height = 100	
 /size = (100%, 100%)
 </picture>
 
@@ -273,7 +284,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </text>
 
 <text survey_error>
-/ items= ("Error - Please enter at least 5 words and their confidence ratings.")
+/ items= ("Error - Please enter 5 words and their confidence ratings.")
 / fontstyle = ("Arial", 1.5%, true, false, false, false, 5, 0)
 / txbgcolor = white
 / txcolor = red
@@ -318,6 +329,43 @@ Note: The following represents five masks to be used after the picture stimulus
 / txcolor = (255, 255, 255)
 </text>
 
+<caption input_validation_instruction>
+/ caption = "You must enter 5 words and their confidence ratings to proceed. Try your best!"
+/ position = (values.first_col, values.textbox_offset + 6*values.textbox_gap)
+/ fontstyle = ("Arial", 2.5%, false, false, false, false, 5, 0)
+/ subcaptionfontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_0>
+/ caption = "For a guide, here are the kind of words that you may enter:"
+/ position = (values.first_col, values.textbox_offset - 23)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_1>
+/ caption = "<% item.word_guidelines.item(1) %>"
+/ position = (values.first_col, values.textbox_offset - 20)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_2>
+/ caption = "<% item.word_guidelines.item(2) %>"
+/ position = (values.first_col, values.textbox_offset - 17)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_3>
+/ caption = "<% item.word_guidelines.item(3) %>"
+/ position = (values.first_col, values.textbox_offset - 14)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_4>
+/ caption = "<% item.word_guidelines.item(4) %>"
+/ position = (values.first_col, values.textbox_offset - 11)
+/ fontstyle = ("Arial", 1.5%, false, false, false, false, 5, 0)
+</caption>
+
 **************************************************************************************************************
 **************************************************************************************************************
 	TRIALS
@@ -325,12 +373,12 @@ Note: The following represents five masks to be used after the picture stimulus
 **************************************************************************************************************
 
 <values>
-/textbox_offset = 22
+/textbox_offset = 40
 /textbox_gap = 5
 /textbox_width = 20
 /textbox_height = 4
-/first_col = 20
-/second_col = 45
+/first_col = 15
+/second_col = 38
 
 /radiobuttons_offset = values.textbox_offset
 /radiobuttons_gap = 5
@@ -341,20 +389,35 @@ Note: The following represents five masks to be used after the picture stimulus
 /file = "include_surveypage_inputs.iqx"
 </include>
 
+<include>
+/file = "include_participant_demographics.iqx"
+</include>
 
-NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10; 
+NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
+NOTE: The 11 questions onwards are text to be displayed. 
 <surveypage word_generation>
 / caption = "<% item.directions.item(2) %>"
-/ subcaption = "You must enter at least 5 words and their confidence ratings to proceed."
-/ subcaptionfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
 / fontstyle =  ("Arial", 3%)
 / showquestionnumbers = false
 / showpagenumbers = false
-/ questions = [1=d1; 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10; 11=rb1; 12=rb2; 13=rb3; 14=rb4; 15=rb5; 16=rb6; 17=rb7; 18=rb8; 19=rb9; 20=rb10]
+/ questions = [1=d1; 2=d2; 3=d3; 4=d4; 5=d5; 6=rb1; 7=rb2; 8=rb3; 9=rb4; 10=rb5; 11=input_words_guideline_0; 12=input_validation_instruction; 13=input_words_guideline_1; 14=input_words_guideline_2; 15=input_words_guideline_3; 16=input_words_guideline_4]
 / navigationbuttonsize = (20, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
-/ nextbuttonposition = (35%, values.textbox_offset + 11*values.textbox_gap)
+/ nextbuttonposition = (35%, values.textbox_offset + 8.5*values.textbox_gap)
 / finishlabel = "Next Trial"
+/ response = correct
+</surveypage>
+
+<surveypage demographic_page>
+/ caption = "You have now finished the trials. Before you complete the experiment, we would like to complete the following questions please."
+/ fontstyle =  ("Arial", 3%)
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=sex; 2=age; 3=nationality; 4=education; 5=first_language; 6=second_language; 7=number_of_years_english_speaking]
+/ navigationbuttonsize = (20, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (35%,  values.demo_starting_y_offset + 10*values.demo_gap)
+/ finishlabel = "Complete"
 / response = correct
 </surveypage>
 
@@ -574,8 +637,12 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 /file = "include_blocks_demo.iqx"
 </include>
 
-<block consent>
+<block intro>
 / preinstructions = (intro)
+</block>
+
+<block consent>
+/ preinstructions = (consent)
 </block>
 
 <block completion>
@@ -583,15 +650,22 @@ NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
 / preinstructions = (thanks)
 </block>
 
+<block demographics>
+/trials = [1=demographic_page]	
+</block>
+
+
 **************************************************************************************************************
 **************************************************************************************************************
 	EXPERIMENT
 **************************************************************************************************************
 **************************************************************************************************************
 
+NOTE: /blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = demographics; 6 = completion]
+
 <expt>
-/blocks = [1 = practice_block; 2 = block1; 3 = completion]
 /onexptend = [values.completed = 1]
+/blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = demographics; 6 = completion]
 </expt>
 
 **************************************************************************************************************
