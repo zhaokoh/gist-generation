@@ -26,9 +26,8 @@ h1 { font-size: xx-large; }
 
 .logo {
     width: 15%;
-    /*display: inline-block;*/
+    display: inline-block;
     padding-right: 30px;
-    display: none;
 }
 
 .title {

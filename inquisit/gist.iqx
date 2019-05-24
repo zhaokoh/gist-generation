@@ -203,9 +203,27 @@ summary data
 Note: this picture element controls the selection of the to be presented picture
 /select = noreplace => selects the pictures randomly without replacement
 if a sequential order is preferred => /select = sequential
-<picture gdg>
-/items = pictures
-/select = noreplacenorepeat
+<picture gdg_67soa>
+/items = items_67soa
+/select = sequence
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture gdg_133soa>
+/items = items_133soa
+/select = sequence
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture gdg_267soa>
+/items = items_267soa
+/select = sequence
 /position = (50%, 50%)
 / width = 100
 / height = 100
@@ -310,7 +328,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </text>
 
 <text completion_code>
-/items = ("Amazon Mechanical Code: <%values.completion_code%>")
+/items = ("Your Amazon Mechanical Turk Code: <%values.completion_code%>")
 /position = (50, 20)
 /halign = center
 / valign = center
@@ -318,11 +336,11 @@ Note: The following represents five masks to be used after the picture stimulus
 / vjustify = center
 / txbgcolor = (0, 0, 0)
 / fontstyle = ("Arial", 4.13%, false, false, false, false, 5, 0)
-/ txcolor = (255, 255, 255)
+/ txcolor = (255, 0, 0)
 </text>
 
 <text completion_code_instruction>
-/items = ("Copy this completion code and paste it back to the Amazon Mechnical Turk Page. ~n~nPress [Space] to end this experiment.")
+/items = ("Please record/copy this completion code and paste it back to the Amazon Mechnical Turk Page.~nThank you again for participating in our study!~n~nPress double-click (two clicks) your mouse to end this experiment.")
 /position = (50, 40)
 / txbgcolor = (0, 0, 0)
 / fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
@@ -386,7 +404,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </values>
 
 <include>
-/file = "include_surveypage_inputs.iqx"
+/file = "include_surveypage_inputs_no_validation.iqx"
 </include>
 
 <include>
@@ -409,7 +427,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 </surveypage>
 
 <surveypage demographic_page>
-/ caption = "You have now finished the trials. Before you complete the experiment, we would like to complete the following questions please."
+/ caption = "You have now finished the trials. Before you complete the experiment, we would like you to complete the following questions please."
 / fontstyle =  ("Arial", 3%)
 / showquestionnumbers = false
 / showpagenumbers = false
@@ -517,7 +535,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 <trial pic_67soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	1000 = gdg;
+	1000 = gdg_67soa;
 	1067 = mask1;
 	1127 = mask2;
 	1187 = mask3;
@@ -527,8 +545,8 @@ NOTE: The 11 questions onwards are text to be displayed.
 / timeout = parameters.fixationduration + 67 + (5 * 60)
 /branch = [surveypage.word_generation]
 /ontrialend = [
-	values.img_num = picture.gdg.currentvalue;
-	values.img_file = picture.gdg.currentitem;
+	values.img_num = picture.gdg_67soa.currentvalue;
+	values.img_file = picture.gdg_67soa.currentitem;
 	values.soa = 67
 ]
 / recorddata = true
@@ -537,7 +555,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 <trial pic_133soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	1000 = gdg;
+	1000 = gdg_133soa;
 	1133 = mask1;
 	1193 = mask2;
 	1253 = mask3;
@@ -547,8 +565,8 @@ NOTE: The 11 questions onwards are text to be displayed.
 / timeout = parameters.fixationduration + 133 + (5 * 60)
 /branch = [surveypage.word_generation]
 /ontrialend = [
-	values.img_num = picture.gdg.currentvalue;
-	values.img_file = picture.gdg.currentitem;
+	values.img_num = picture.gdg_133soa.currentvalue;
+	values.img_file = picture.gdg_133soa.currentitem;
 	values.soa = 133
 ]
 / recorddata = true
@@ -557,7 +575,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 <trial pic_267soa>
 / stimulustimes = [
 	0 = fixation_cross;
-	1000 = gdg;
+	1000 = gdg_267soa;
 	1267 = mask1;
 	1327 = mask2;
 	1387 = mask3;
@@ -567,29 +585,9 @@ NOTE: The 11 questions onwards are text to be displayed.
 / timeout = parameters.fixationduration + 267 + (5 * 60)
 /branch = [surveypage.word_generation]
 /ontrialend = [
-	values.img_num = picture.gdg.currentvalue;
-	values.img_file = picture.gdg.currentitem;
+	values.img_num = picture.gdg_267soa.currentvalue;
+	values.img_file = picture.gdg_267soa.currentitem;
 	values.soa = 267
-]
-/ recorddata = true
-</trial>
-
-<trial pic_500soa>
-/ stimulustimes = [
-	0 = fixation_cross;
-	1000 = gdg;
-	1500 = mask1;
-	1560 = mask2;
-	1620 = mask3;
-	1680 = mask4;
-	1740 = mask5;
-]
-/ timeout = parameters.fixationduration + 500 + (5 * 60)
-/branch = [surveypage.word_generation]
-/ontrialend = [
-	values.img_num = picture.gdg.currentvalue;
-	values.img_file = picture.gdg.currentitem;
-	values.soa = 500
 ]
 / recorddata = true
 </trial>
@@ -634,7 +632,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 **************************************************************************************************************
 
 <include>
-/file = "include_blocks_demo.iqx"
+/file = "include_blocks_standard.iqx"
 </include>
 
 <block intro>

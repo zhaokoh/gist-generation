@@ -262,7 +262,7 @@
 </dropdown>
 
 <textbox number_of_years_english_speaking>
-/ caption = "Number of years speaking english"
+/ caption = "Number of years speaking English"
 / maxchars = 3
 / textboxsize = (5, 3)
 / required = true

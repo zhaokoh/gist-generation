@@ -10,7 +10,7 @@
 </block>
 
 <block block1>
-/trials = [1-2 = noreplacenorepeat(pic_67soa,pic_133soa,pic_267soa)]
+/trials = [1-3 = noreplacenorepeat(pic_67soa,pic_133soa,pic_267soa)]
 / preinstructions = (block1_prepage)
 </block>
 

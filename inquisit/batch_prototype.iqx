@@ -1,0 +1,11 @@
+﻿<batch>
+/ file = "./gist_imgset_1-20.iqx"
+/ groupassignment = groupnumber
+/ subjects = (1 of 2)
+</batch>
+
+<batch>
+/ file = "./gist_imgset_1-20.iqx"
+/ groupassignment = groupnumber
+/ subjects = (2 of 1)
+</batch>

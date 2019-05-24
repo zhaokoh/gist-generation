@@ -28,39 +28,9 @@
 / textboxsize = (values.textbox_width, values.textbox_height)
 / required = false
 </textbox>
-<textbox d6>
-/ maxchars = 100
-/ position = (values.first_col, values.textbox_offset + 5*values.textbox_gap)
-/ textboxsize = (values.textbox_width, values.textbox_height)
-/ required = false
-</textbox>
-<textbox d7>
-/ maxchars = 100
-/ position = (values.first_col, values.textbox_offset + 6*values.textbox_gap)
-/ textboxsize = (values.textbox_width, values.textbox_height)
-/ required = false
-</textbox>
-<textbox d8>
-/ maxchars = 100
-/ position = (values.first_col, values.textbox_offset + 7*values.textbox_gap)
-/ textboxsize = (values.textbox_width, values.textbox_height)
-/ required = false
-</textbox>
-<textbox d9>
-/ maxchars = 100
-/ position = (values.first_col, values.textbox_offset + 8*values.textbox_gap)
-/ textboxsize = (values.textbox_width, values.textbox_height)
-/ required = false
-</textbox>
-<textbox d10>
-/ maxchars = 100
-/ position = (values.first_col, values.textbox_offset + 9*values.textbox_gap)
-/ textboxsize = (values.textbox_width, values.textbox_height)
-/ required = false
-</textbox>
 
 <radiobuttons rb1>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
 / required=false
 / position = (values.second_col, values.radiobuttons_offset)
 / orientation = horizontal
@@ -68,7 +38,7 @@
 </radiobuttons>
 
 <radiobuttons rb2>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
 / required=false
 / position = (values.second_col, values.radiobuttons_offset + values.radiobuttons_gap)
 / orientation = horizontal
@@ -77,7 +47,7 @@
 </radiobuttons>
 
 <radiobuttons rb3>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
 / required=false
 / position = (values.second_col, values.radiobuttons_offset + 2*values.radiobuttons_gap)
 / orientation = horizontal
@@ -85,7 +55,7 @@
 </radiobuttons>
 
 <radiobuttons rb4>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
 / required=false
 / position = (values.second_col, values.radiobuttons_offset + 3*values.radiobuttons_gap)
 / orientation = horizontal
@@ -93,49 +63,9 @@
 </radiobuttons>
 
 <radiobuttons rb5>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
 / required=false
 / position = (values.second_col, values.radiobuttons_offset + 4*values.radiobuttons_gap)
-/ orientation = horizontal
-/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
-</radiobuttons>
-
-<radiobuttons rb6>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
-/ required=false
-/ position = (values.second_col, values.radiobuttons_offset + 5*values.radiobuttons_gap)
-/ orientation = horizontal
-/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
-</radiobuttons>
-
-<radiobuttons rb7>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
-/ required=false
-/ position = (values.second_col, values.radiobuttons_offset + 6*values.radiobuttons_gap)
-/ orientation = horizontal
-/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
-</radiobuttons>
-
-<radiobuttons rb8>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
-/ required=false
-/ position = (values.second_col, values.radiobuttons_offset + 7*values.radiobuttons_gap)
-/ orientation = horizontal
-/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
-</radiobuttons>
-
-<radiobuttons rb9>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
-/ required=false
-/ position = (values.second_col, values.radiobuttons_offset + 8*values.radiobuttons_gap)
-/ orientation = horizontal
-/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
-</radiobuttons>
-
-<radiobuttons rb10>
-/ options=("Guess", "Maybe", "Confident", "Very Confident")
-/ required=false
-/ position = (values.second_col, values.radiobuttons_offset + 9*values.radiobuttons_gap)
 / orientation = horizontal
 / fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
 </radiobuttons>
