@@ -404,7 +404,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </values>
 
 <include>
-/file = "include_surveypage_inputs_no_validation.iqx"
+/file = "include_surveypage_inputs.iqx"
 </include>
 
 <include>
