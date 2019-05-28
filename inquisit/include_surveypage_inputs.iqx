@@ -48,7 +48,6 @@
 / position = (values.second_col, values.radiobuttons_offset + values.radiobuttons_gap)
 / orientation = horizontal
 / fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
-/ size = (10, 10)
 </radiobuttons>
 
 <radiobuttons rb3>
