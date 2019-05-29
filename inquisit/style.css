@@ -52,6 +52,19 @@ h1 { font-size: xx-large; }
     font-size: medium;
 }
 
+.toggle-content .button {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.toggle-content .button:hover {
+    cursor: pointer;
+}
+
+.toggle-content .content {
+    display: none;
+}
+
 #zoom_panel {
     display: none;
     z-index: 1; 
@@ -78,4 +91,3 @@ h1 { font-size: xx-large; }
     text-align: center;
     color: red;
 }
-
