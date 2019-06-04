@@ -605,6 +605,10 @@ NOTE: The 11 questions onwards are text to be displayed.
 / file = "complete.html"
 </htmlpage>
 
+<htmlpage complete_block>
+/ file = "complete_block.html"
+</htmlpage>
+
 <htmlpage practice_prepage>
 / file = "practice_prepage.html"
 </htmlpage>
@@ -627,29 +631,44 @@ NOTE: The 11 questions onwards are text to be displayed.
 
 **************************************************************************************************************
 **************************************************************************************************************
-	BLOCKS
+	BLOCKS "include_blocks_standard.iqx"
 **************************************************************************************************************
 **************************************************************************************************************
 
 <include>
+/file = "include_blocks_short.iqx"
+/ precondition = [script.subjectid == 100]
+</include>
+
+<include>
 /file = "include_blocks_standard.iqx"
+/ precondition = [script.subjectid != 100]
 </include>
 
 <block intro>
 / preinstructions = (intro)
+/ skip = [parameters.is_mturk == false]
 </block>
 
 <block consent>
 / preinstructions = (consent)
+/ skip = [parameters.is_mturk == false]
 </block>
 
 <block completion>
 /trials = [1=mturk_completion_code]
 / preinstructions = (thanks)
+/ skip = [parameters.show_completion_block == true]
+</block>
+
+<block completion_block>
+/ preinstructions = (complete_block)
+/ skip = [parameters.show_completion_block == false]
 </block>
 
 <block demographics>
 /trials = [1=demographic_page]	
+/ skip = [parameters.skip_demographics == true]
 </block>
 
 
@@ -663,7 +682,7 @@ NOTE: /blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = dem
 
 <expt>
 /onexptend = [values.completed = 1]
-/blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = demographics; 6 = completion]
+/blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = demographics; 6 = completion_block; 7 = completion]
 </expt>
 
 **************************************************************************************************************

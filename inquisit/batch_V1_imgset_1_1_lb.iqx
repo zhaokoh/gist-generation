@@ -8,6 +8,9 @@
 /fixationduration = 1000
 /is_mturk = false
 /experiment_id = "GIST_BATCH_V1_1_1_LB"
+/skip_practice = false
+/skip_demographics = true
+/show_completion_block = true
 </parameters>
 
 <variables>

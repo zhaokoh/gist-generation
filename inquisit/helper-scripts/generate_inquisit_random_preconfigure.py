@@ -7,9 +7,9 @@ import os
 import random
 import numpy as np
 
-BASE_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/1/buckets/1'
+BASE_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/1/buckets/4'
 TARGET_FOLDER=''
-OUTPUT_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/1/buckets/1'
+OUTPUT_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/1/buckets/4'
 PRACTICE_IMAGES = ['im0000003.jpg', 'im0000009.jpg', 'im0000014.jpg'] # These are ignored
 NUM_IMAGES_PER_SET = 21
 NUM_SOA_GROUP = 3
