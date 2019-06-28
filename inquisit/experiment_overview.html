@@ -31,7 +31,7 @@
 			<p>All data will be kept confidential. If you have any question at this stage, please contact the investigators above.</p>
 
 			<div class="toggle-content">
-				<span class="button" onclick="toggle_information_sheet();">Click here for a detailed version of the participant information sheet</span>
+				<span class="button" onclick="document.getElementById('part-inf-sheet').style.display = 'block';">Click here for a detailed version of the participant information sheet</span>
 				<div id="part-inf-sheet" class="content">
 					<h3>1. Your consent</h3>
 
@@ -126,15 +126,5 @@
 		<div class="body">
 		</div>
 
-		<script type="text/javascript">
-			function toggle_information_sheet() {
-				contentDiv = this.document.getElementById("part-inf-sheet")
-				if (contentDiv.style.display == "block") {
-					contentDiv.style.display = "none";
-				} else {
-					contentDiv.style.display = "block";
-				}
-			}
-		</script>
 	</body>
 </html>
