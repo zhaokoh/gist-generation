@@ -121,7 +121,7 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 </item>
 
 <item word_guidelines>
-/1 = "1. Must be a non-repeat and valid English word (more than 1 character)."
+/1 = "1. Must be a non-repeat and valid English word."
 /2 = "2. Nouns (e.g. ball, cat, apple), Verbs (e.g. run, play, jump), Adjectives (e.g. calm, exciting, beautiful)"
 /3 = "3. Please use the character '-' if you enter a phrase with spaces, for e.g. sunny-afternoon"
 /4 = "If you are unable to come up with all 5 words, please enter arbitrary words and select the button 'Don't Know' for the rest."
@@ -558,7 +558,6 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_67soa.stimulusonset.1
 ]
 / recorddata = true
-/ pre
 </trial>
 
 <trial pic_133soa>
@@ -571,7 +570,6 @@ NOTE: The 11 questions onwards are text to be displayed.
 	1313 = mask4;
 	1373 = mask5;
 ]
-/
 / timeout = parameters.fixationduration + 133 + (5 * 60)
 /branch = [surveypage.word_generation]
 /ontrialend = [

@@ -5,9 +5,9 @@ from shutil import copyfile, rmtree
 import glob
 import os
 
-BASE_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/1'
+BASE_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/2'
 TARGET_FOLDER=''
-OUTPUT_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/1/buckets'
+OUTPUT_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/2/buckets'
 PRACTICE_IMAGES = ['im0000003.jpg', 'im0000009.jpg', 'im0000014.jpg'] # These are ignored
 NUM_IMAGES_PER_SET = 21
 
