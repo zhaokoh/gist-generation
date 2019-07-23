@@ -167,7 +167,7 @@ raw data
 
 <data>
 / separatefiles = true
-/ columns = (build, date, time, subject, blockcode, blocknum, trialcode, trialnum, stimulusonset, values.est_soa, values.img_num, values.img_file, values.soa, values.completion_code, response, latency)
+/ columns = (build, date, time, subject, blockcode, blocknum, trialcode, trialnum, stimulusonset, values.est_soa, values.est_soa2, values.est_soa3, values.est_soa4, values.est_soa5, values.img_num, values.img_file, values.soa, values.completion_code, response, latency)
 </data>
 
 ********************
@@ -195,6 +195,10 @@ summary data
 /completion_code = ""
 /trial_start = 0
 /est_soa = 0
+/est_soa2 = 0
+/est_soa3 = 0
+/est_soa4 = 0
+/est_soa5 = 0
 </values>
 
 **************************************************************************************************************
@@ -343,7 +347,7 @@ Note: The following represents five masks to be used after the picture stimulus
 </text>
 
 <text completion_code_instruction>
-/items = ("Please record/copy this completion code and paste it back to the Amazon Mechnical Turk Page.~nThank you again for participating in our study!~n~nPress double-click (two clicks) your mouse to end this experiment.")
+/items = ("Please record/copy this completion code and paste it back to the Amazon Mechnical Turk Page.~nThank you again for participating in our study!~n~nPress <space> to end this experiment.")
 /position = (50, 40)
 / txbgcolor = (0, 0, 0)
 / fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
@@ -467,7 +471,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.img_num = picture.practice_stimuli.currentvalue;
 	values.img_file = picture.practice_stimuli.currentitem;
 	values.soa = 67;
-	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1
+	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
 ]
 / recorddata = true
 </trial>
@@ -488,7 +496,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.img_num = picture.practice_stimuli.currentvalue;
 	values.img_file = picture.practice_stimuli.currentitem;
 	values.soa = 133;
-	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1
+	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
 ]
 / recorddata = true
 </trial>
@@ -509,7 +521,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.img_num = picture.practice_stimuli.currentvalue;
 	values.img_file = picture.practice_stimuli.currentitem;
 	values.soa = 267;
-	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1
+	values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
 ]
 / recorddata = true
 </trial>
@@ -555,7 +571,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.img_num = picture.gdg_67soa.currentvalue;
 	values.img_file = picture.gdg_67soa.currentitem;
 	values.soa = 67;
-	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_67soa.stimulusonset.1
+	values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_67soa.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
 ]
 / recorddata = true
 </trial>
@@ -576,7 +596,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.img_num = picture.gdg_133soa.currentvalue;
 	values.img_file = picture.gdg_133soa.currentitem;
 	values.soa = 133;
-	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_133soa.stimulusonset.1
+	values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_133soa.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
 ]
 / recorddata = true
 </trial>
@@ -597,7 +621,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 	values.img_num = picture.gdg_267soa.currentvalue;
 	values.img_file = picture.gdg_267soa.currentitem;
 	values.soa = 267;
-	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_267soa.stimulusonset.1
+	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_267soa.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
 ]
 / recorddata = true
 </trial>
@@ -607,8 +635,8 @@ NOTE: The 11 questions onwards are text to be displayed.
 <trial mturk_completion_code>
 / ontrialbegin = [values.completion_code=ipart(rand(1,99999))]
 / stimulustimes = [0=completion_code, completion_code_instruction]
-/ inputdevice = mouse
-/ correctresponse = (lbuttondblclk)
+/ inputdevice = keyboard
+/ correctresponse = (" ")
 / skip = [parameters.is_mturk == false]
 </trial>
 
