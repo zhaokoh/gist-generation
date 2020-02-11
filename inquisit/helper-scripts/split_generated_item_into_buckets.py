@@ -5,9 +5,9 @@ from shutil import copyfile, rmtree
 import glob
 import os
 
-BASE_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/2'
+BASE_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/5'
 TARGET_FOLDER=''
-OUTPUT_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/2/buckets'
+OUTPUT_FOLDER='/Volumes/Spaceship/projects/gist-generation/shinji_imagesets/5/buckets'
 PRACTICE_IMAGES = ['im0000003.jpg', 'im0000009.jpg', 'im0000014.jpg'] # These are ignored
 NUM_IMAGES_PER_SET = 21
 
@@ -15,7 +15,7 @@ all_images = glob.glob(BASE_FOLDER + "/im*.jpg")
 
 actual_stimuli_files = []
 
-for img in range(1, len(all_images)):
+for img in range(0, len(all_images)):
     filename = all_images[img][all_images[img].rfind("/")+1:]
     
     if (filename not in PRACTICE_IMAGES):
@@ -25,7 +25,7 @@ for img in range(1, len(all_images)):
 # We shuffle them and divide into num_of_buckets
 
 total_files = len(actual_stimuli_files)
-print("Shuffling the stimuli files...")
+print("Shuffling the stimuli files...%d" % (total_files))
 shuffle(actual_stimuli_files)
 
 num_of_buckets = floor(total_files/NUM_IMAGES_PER_SET)
