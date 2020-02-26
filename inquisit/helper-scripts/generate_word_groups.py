@@ -35,23 +35,23 @@ number_of_groups = len(np.unique(word_list))//ITEMS_PER_GROUP + 1
 print("Dividing into %d groups with %d words in each group (except the last group)." % (number_of_groups, ITEMS_PER_GROUP))
 
 item_list_code = ""
-for i in range(1, number_of_groups):
-    start_index = (i-1)*ITEMS_PER_GROUP
-    end_index = i*ITEMS_PER_GROUP-1
+for i in range(0, number_of_groups):
+    start_index = (i)*ITEMS_PER_GROUP
+    end_index = (i+1)*ITEMS_PER_GROUP
 
     subset_words = word_list[start_index:end_index]
 
-    item_list_code = item_list_code + ("<item word_list_%d>\n" % (i))
-    for j in range(1, len(subset_words)+1):
-        item_list_code = item_list_code + ("/%d = \"%s\"\n" % (j, subset_words[j-1]))
+    item_list_code = item_list_code + ("<item word_list_%d>\n" % (i+1))
+    for j in range(0, len(subset_words)):
+        item_list_code = item_list_code + ("/%d = \"%s\"\n" % (j+1, subset_words[j]))
     item_list_code = item_list_code + "</item>\n\n"
 
-item_list_code = item_list_code + ("<item word_list_%d>\n" % (number_of_groups))
-last_group = word_list[(number_of_groups-1)*ITEMS_PER_GROUP:]
+# item_list_code = item_list_code + ("<item word_list_%d>\n" % (number_of_groups))
+# last_group = word_list[(number_of_groups-1)*ITEMS_PER_GROUP:]
 
-for j in range(1, len(last_group)+1):
-    item_list_code = item_list_code + ("/%d = \"%s\"\n" % (j, last_group[j-1]))
-item_list_code = item_list_code + "</item>\n\n"
+# for j in range(0, len(last_group)):
+#     item_list_code = item_list_code + ("/%d = \"%s\"\n" % (j+1, last_group[j]))
+# item_list_code = item_list_code + "</item>\n\n"
 
 variable_group_code = "<variables>\n"
 for i in range(1, number_of_groups+1):
