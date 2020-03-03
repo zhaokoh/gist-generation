@@ -5,12 +5,12 @@
 **************************************************************************************************************
 
 <block practice_block>
-/trials = [1-3 = noreplacenorepeat(practice_pic_67soa,practice_pic_133soa,practice_pic_267soa)]
+/trials = [1-3 = noreplacenorepeat(practice_pic_133soa)]
 / preinstructions = (practice_prepage)
-/ skip = [parameters.skip_practice == true]
 </block>
 
+
 <block block1>
-/trials = [1-21 = noreplacenorepeat(pic_67soa,pic_133soa,pic_267soa)]
+/trials = [1-1 = noreplacenorepeat(pic_133soa)]
 / preinstructions = (block1_prepage)
 </block>
