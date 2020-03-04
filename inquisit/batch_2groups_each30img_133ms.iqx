@@ -1,0 +1,105 @@
+﻿
+<parameters>
+/fixationduration = 1000
+/is_mturk = true
+/experiment_id = "GIST_BATCH_V1_1_2_MT"
+/skip_practice = false
+/skip_demographics = false
+/show_completion_block = false
+</parameters>
+
+<variables>
+/ group = (1 of 2) (items_133soa = picset_133_1)
+/ group = (2 of 2) (items_133soa = picset_133_2)
+/ groupassignment = groupnumber
+</variables>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI: change editable stimuli here
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: The following needs to be generated using helper-scripts, otherwise you will be typing all day - see helper-scripts generate-inquisit-random_preconfigure.py
+
+***********************
+***********************
+
+<item picset_133_1>
+/1 = "im0000655.jpg"
+/2 = "im0000753.jpg"
+/3 = "im0000236.jpg"
+/4 = "im0000313.jpg"
+/5 = "im0002320.jpg"
+/6 = "im0000494.jpg"
+/7 = "im0004719.jpg"
+/8 = "im0002068.jpg"
+/9 = "im0003372.jpg"
+/10 = "im0003279.jpg"
+/11 = "im0002419.jpg"
+/12 = "im0000954.jpg"
+/13 = "im0002969.jpg"
+/14 = "im0001663.jpg"
+/15 = "im0004746.jpg"
+/16 = "im0003230.jpg"
+/17 = "im0000694.jpg"
+/18 = "im0001958.jpg"
+/19 = "im0000835.jpg"
+/20 = "im0000444.jpg"
+/21 = "im0008478.jpg"
+/22 = "im0000933.jpg"
+/23 = "im0001032.jpg"
+/24 = "im0001035.jpg"
+/25 = "im0001048.jpg"
+/26 = "im0001079.jpg"
+/27 = "im0001171.jpg"
+/28 = "im0001311.jpg"
+/29 = "im0001348.jpg"
+/30 = "im0001549.jpg"
+</item>
+
+
+
+<item picset_133_2>
+/1 = "im0000069.jpg"
+/2 = "im0000355.jpg"
+/3 = "im0000385.jpg"
+/4 = "im0000390.jpg"
+/5 = "im0000631.jpg"
+/6 = "im0000689.jpg"
+/7 = "im0000784.jpg"
+/8 = "im0000849.jpg"
+/9 = "im0001006.jpg"
+/10 = "im0001263.jpg"
+/11 = "im0001517.jpg"
+/12 = "im0001833.jpg"
+/13 = "im0001883.jpg"
+/14 = "im0001921.jpg"
+/15 = "im0002951.jpg"
+/16 = "im0004304.jpg"
+/17 = "im0004351.jpg"
+/18 = "im0004755.jpg"
+/19 = "im0008934.jpg"
+/20 = "im0009110.jpg"
+/21 = "im0000338.jpg"
+/22 = "im0001719.jpg"
+/23 = "im0001832.jpg"
+/24 = "im0001329.jpg"
+/25 = "im0004473.jpg"
+/26 = "im0007360.jpg"
+/27 = "im0007575.jpg"
+/28 = "im0007777.jpg"
+/29 = "im0007924.jpg"
+/30 = "im0007944.jpg"
+/31 = "im0008740.jpg"
+</item>
+
+
+
+<include>
+/file = "gist_2groups_each30img_133ms.iqx"
+</include>
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************
