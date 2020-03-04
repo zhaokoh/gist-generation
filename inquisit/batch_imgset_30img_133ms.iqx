@@ -60,7 +60,7 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 
 
 <include>
-/file = "gist_30img.iqx"
+/file = "gist_30img_133ms.iqx"
 </include>
 
 **************************************************************************************************************

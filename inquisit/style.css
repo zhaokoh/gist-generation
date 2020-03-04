@@ -8,7 +8,7 @@ em {
     font-style: normal;
 }
 
-h1 { font-size: x-large; }
+h1 { font-size: xx-large; }
 
 .header {
     display: inline-block;
@@ -31,7 +31,7 @@ h1 { font-size: x-large; }
 }
 
 .title {
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
     display: inline-block;
     margin-bottom: 0px;
@@ -79,14 +79,14 @@ h1 { font-size: x-large; }
 }
 
 .info-instructions {
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
     text-align: left;
     color: green;
 }
 
 .warning-instructions {
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bold;
     text-align: center;
     color: red;

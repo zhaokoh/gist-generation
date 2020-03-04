@@ -1,0 +1,131 @@
+﻿************************ practice trials *******************************
+
+<trial practice_pic_67soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	1000 = practice_stimuli;
+	1067 = mask1;
+	1127 = mask2;
+	1187 = mask3;
+	1247 = mask4;
+	1307 = mask5;
+]
+/ timeout = parameters.fixationduration + 67 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.practice_stimuli.currentvalue;
+	values.img_file = picture.practice_stimuli.currentitem;
+	values.soa = 67;
+	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
+]
+/ recorddata = true
+</trial>
+
+
+
+<trial practice_pic_267soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	1000 = practice_stimuli;
+	1267 = mask1;
+	1327 = mask2;
+	1387 = mask3;
+	1447 = mask4;
+	1507 = mask5;
+]
+/ timeout = parameters.fixationduration + 267 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.practice_stimuli.currentvalue;
+	values.img_file = picture.practice_stimuli.currentitem;
+	values.soa = 267;
+	values.est_soa = picture.mask1.stimulusonset.1 - picture.practice_stimuli.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
+]
+/ recorddata = true
+</trial>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**************************** real trials *******************************
+
+<trial pic_67soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	1000 = gdg_67soa;
+	1067 = mask1;
+	1127 = mask2;
+	1187 = mask3;
+	1247 = mask4;
+	1307 = mask5;
+]
+/ timeout = parameters.fixationduration + 67 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg_67soa.currentvalue;
+	values.img_file = picture.gdg_67soa.currentitem;
+	values.soa = 67;
+	values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_67soa.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
+]
+/ recorddata = true
+</trial>
+
+
+<trial pic_267soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	1000 = gdg_267soa;
+	1267 = mask1;
+	1327 = mask2;
+	1387 = mask3;
+	1447 = mask4;
+	1507 = mask5;
+]
+/timeout = parameters.fixationduration + 267 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg_267soa.currentvalue;
+	values.img_file = picture.gdg_267soa.currentitem;
+	values.soa = 267;
+	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_267soa.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
+]
+/ recorddata = true
+</trial>
+
+
