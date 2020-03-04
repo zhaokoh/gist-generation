@@ -571,7 +571,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 </include>
 
 <include>
-/file = "include_blocks_standard_60img_133ms.iqx"
+/file = "include_blocks_standard_2groups_each30img_133ms.iqx"
 / precondition = [script.subjectid != 100]
 </include>
 
