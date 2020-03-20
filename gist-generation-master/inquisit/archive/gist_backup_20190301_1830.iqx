@@ -1,0 +1,697 @@
+﻿<usermanual>
+						
+									NATURAL SCENE GIST DESCRIPTORS GENERATION
+SCRIPT INFO
+
+Script Author: Zhao Hui Koh (This script is based on the diary script from Millisecond Software)
+last updated: 23-02-2019 by Zhao Hui KOh (zhkoh2@student.monash.edu)
+
+Note (by Millisecond Software):
+By default this script allows participants to move onto the next stimuli before the maximum
+time limit is up (but only after parameters.minstorytime).  To change that setting so that all participants have to wait until 
+the maximum time limit is up, go to TRIALS-> openended.story and follow further instructions.
+In general: Once the maximum time limit is up, the current story page closes and the next trial is started.
+
+Zhao thanks Millisecond Software for sharing this script!
+
+
+BACKGROUND INFO
+
+											*Purpose*
+This script implements a Gist Descriptor Generation tasi (GDG).											
+
+											  *Task*
+Participants are asked to do 8 picture story exercises. Each exercise presents a picture for 10s
+and then asks the participant to write a complete story about the picture. Participants have
+5 minutes for each story.
+
+DATA FILE INFORMATION: 
+The default data stored in the data files are:
+
+(1) Raw data file: 'PictureStoryExercise_raw*.iqdat' (a separate file for each participant)
+
+build:							Inquisit build
+computer.platform:				the platform the script was run on
+date, time, subject, group:		date and time script was run with the current subject/groupnumber 
+blockcode, blocknum:			the name and number of the current block
+trialcode, trialnum: 			the name and number of the currently recorded trial
+									(Note: not all trials that are run might record data; by default data is collected unless /recorddata = false is set for a particular trial/block) 
+response:						the participant's response (openended response)
+latency: 						the response latency
+
+(2) Summary data file: 'PictureStoryExercise_summary*.iqdat' (a separate file for each participant)
+
+script.startdate:				date script was run
+script.starttime:				time script was started
+script.subjectid:				subject id number
+script.groupid:					group id number
+script.elapsedtime:				time it took to run script (in ms)
+computer.platform:				the platform the script was run on
+/completed:						0 = script was not completed (prematurely aborted); 1 = script was completed (all conditions run)
+
+
+EXPERIMENTAL SET-UP
+* 8 pictures - order is determined randomly
+* pictures are presented for 10s
+* Then a textbox appears in which participants can enter the story
+* Participants have 5 minutes for each pic (warning are given shortly before participants are moved onto the next picture)
+
+STIMULI
+can be edited under section Editable Stimuli
+
+INSTRUCTIONS
+can be edited under section Editable Instructions
+
+EDITABLE CODE:
+check below for (relatively) easily editable parameters, stimuli, instructions etc. 
+Keep in mind that you can use this script as a template and therefore always "mess" with the entire code to further customize your experiment.
+
+The parameters you can change are:
+
+/pictureduration:				duration the pictures are presented in ms
+/fixationduration:				duration for the fixation cross
+</usermanual>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE PARAMETERS: change editable parameters here
+**************************************************************************************************************
+**************************************************************************************************************
+
+<parameters>
+/pictureduration = 133
+/fixationduration = 500
+</parameters>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI: change editable stimuli here
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: The following needs to be generated using helper-scripts, otherwise you will be typing all day
+<item pictures>
+/1 = "im0000003.jpg"
+/2 = "im0000009.jpg"
+/3 = "im0000014.jpg"
+/4 = "im0000020.jpg"
+/5 = "im0000028.jpg"
+/6 = "im0000030.jpg"
+/7 = "im0000041.jpg"
+/8 = "im0000048.jpg"
+/9 = "im0000050.jpg"
+/10 = "im0000051.jpg"
+</item>
+
+<item masks>
+/1 = "mask1.jpg"
+/2 = "mask2.jpg"
+/3 = "mask3.jpg"
+/4 = "mask4.jpg"
+/5 = "mask5.jpg"
+/6 = "mask6.jpg"
+/7 = "mask7.jpg"
+/8 = "mask8.jpg"
+/9 = "mask9.jpg"
+/10 = "mask10.jpg"
+/10 = "mask11.jpg"
+/10 = "mask12.jpg"
+/10 = "mask13.jpg"
+/10 = "mask14.jpg"
+/10 = "mask15.jpg"
+</item>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE INSTRUCTIONS: change instructions here
+**************************************************************************************************************
+**************************************************************************************************************
+<instruct>
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+</instruct>
+
+<htmlpage intro>
+/ file = "consent_form.html"
+</htmlpage>
+
+<htmlpage exp_instructions>
+/ file = "exp_instructions.html"
+</htmlpage>
+
+<item directions>
+/1 = "Going back to the image that you just saw, what words would you use?~n~nPlease list at least 5 words - Nouns, verbs, adjectives, etc are all OK :)"
+/2 = "There is one minute remaining.  If you have finished, press <%expressions.buttoninstruct1%> to move on."
+/3 = "Time is almost up.  Please prepare to move on to the next Picture..."
+/4 = "Four minutes have passed.  Please press <%expressions.buttoninstruct1%>."
+</item>
+
+<item labels>
+/1 = "Words"
+/2 = "Confidence Ratings"
+</item>
+****************************************************************************************************
+general instruction expressions: adjust the instruction text depending on device used to run script
+****************************************************************************************************
+<expressions>
+/buttoninstruct1 = if (computer.touch && !computer.haskeyboard) {"the response button located at the bottom of your screen";} else {"Ctrl+Enter on your keyboard";}
+</expressions>
+
+**************************************************************************************************************
+								!!!REMAINING CODE: Customize after careful consideration only!!!
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULTS
+**************************************************************************************************************
+**************************************************************************************************************
+script requires Inquisit 5.0.0.0 or higher
+
+<defaults>
+/canvasaspectratio = (4,3)
+/minimumversion = "5.0.0.0"
+/ txcolor = white
+/ screencolor = black
+/ fontstyle = ("Arial", 1.75%, false, false, false, false, 5, 1)
+</defaults>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DATA
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: data file explanations under User Manual Information at the top
+
+********************
+raw data
+********************
+
+<data>
+/ separatefiles = true
+/ columns = (build, computer.platform, date, time, subject, blockcode, blocknum, trialcode, trialnum, values.img_num, values.soa, response, latency)
+</data>
+
+********************
+summary data
+********************
+
+<summarydata>
+/columns = (script.startdate, script.starttime, script.subjectid, script.groupid, script.elapsedtime, computer.platform, values.completed)
+/ separatefiles = true
+</summarydata>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+	VALUES: automatically updated
+*******************************************************************************************************************
+*******************************************************************************************************************
+/completed:				0 = script was not completed; 1 = script was completed (all conditions run)
+/essay:					stores the essay number (= picture itemnumber)
+
+<values>
+/completed = 0
+/img_num = 0
+/soa = 0
+</values>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: this picture element controls the selection of the to be presented picture
+/select = noreplace => selects the pictures randomly without replacement
+if a sequential order is preferred => /select = sequential
+<picture gdg>
+/items = pictures
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+Note: The following represents five masks to be used after the picture stimulus
+<picture mask1>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask2>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask3>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask4>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask5>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<text fixation_cross>
+/ items = ("+")
+/ txcolor = white
+/ txbgcolor = black
+/ vposition = 50%
+/ hposition = 50%
+/ fontstyle = ("Arial", 9%)
+</text>
+
+<text warn>
+/ items = directions
+/ vposition = 17
+/ size = (1000px, 25px)
+/ txbgcolor = black
+/ txcolor = white
+/select = 3
+</text>
+
+<text warn2>
+/ numitems = 1
+/ items = directions
+/ vposition = 90
+/ txcolor = white
+/ txbgcolor = black
+/select = 4
+</text>
+
+<text dir>
+/ numitems = 1
+/ items = directions
+/ vposition = 20
+/ size = (100%, 10%)
+/ txcolor = white
+/ txbgcolor = black
+/select = 1
+</text>
+
+<text dir2>
+/ numitems = 1
+/ items = directions
+/ vposition = 95
+/ txcolor = white
+/ txbgcolor = black
+/select = 2
+</text>
+
+<text survey_error2>
+/ items= ("error = <% surveypage.word_generation.error %>")
+/ fontstyle = ("Arial", 1.74%, true, false, false, false, 5, 0)
+/ txbgcolor = white
+/ txcolor = red
+</text>
+
+<text survey_error>
+/ items= ("ERROR")
+/ fontstyle = ("Arial", 20%, true, false, false, false, 5, 0)
+/ txbgcolor = white
+/ txcolor = red
+/ position = (50%, 50%)
+</text>
+
+<text word_label>
+/ items = labels
+/ select = 1
+/ vposition = 20
+/ size = (100%, 10%)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<text conf_ratings_label>
+/ items = labels
+/ select = 2
+/ vposition = 80
+/ size = (100%, 10%)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIALS
+**************************************************************************************************************
+**************************************************************************************************************
+
+
+<values>
+/textbox_offset = 20
+/textbox_gap = 5
+/textbox_width = 20
+/textbox_height = 4
+/first_col = 20
+/second_col = 45
+
+/radiobuttons_offset = values.textbox_offset
+/radiobuttons_gap = 5
+/radiobuttons_textsize = 2%
+</values>
+
+<textbox d1>
+/ maxchars = 100
+/ minchars = 2
+/ position = (values.first_col, values.textbox_offset)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d2>
+/ maxchars = 100
+/ minchars = 2
+/ position = (values.first_col,  values.textbox_offset + values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d3>
+/ maxchars = 100
+/ minchars = 2
+/ position = (values.first_col, values.textbox_offset + 2*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d4>
+/ maxchars = 100
+/ minchars = 2
+/ position = (values.first_col, values.textbox_offset + 3*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d5>
+/ maxchars = 100
+/ minchars = 2
+/ position = (values.first_col, values.textbox_offset + 4*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d6>
+/ maxchars = 100
+/ minchars = 2
+/ required = false
+/ position = (values.first_col, values.textbox_offset + 5*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d7>
+/ maxchars = 100
+/ minchars = 2
+/ required = false
+/ position = (values.first_col, values.textbox_offset + 6*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d8>
+/ maxchars = 100
+/ minchars = 2
+/ required = false
+/ position = (values.first_col, values.textbox_offset + 7*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d9>
+/ maxchars = 100
+/ minchars = 2
+/ required = false
+/ position = (values.first_col, values.textbox_offset + 8*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+<textbox d10>
+/ maxchars = 100
+/ minchars = 2
+/ required = false
+/ position = (values.first_col, values.textbox_offset + 9*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+</textbox>
+
+<radiobuttons rb1>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb2>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+/ size = (10, 10)
+</radiobuttons>
+
+<radiobuttons rb3>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 2*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb4>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 3*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb5>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 4*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb6>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 5*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb7>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 6*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb8>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 7*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb9>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 8*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb10>
+/ options=("Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 9*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10; 
+<surveypage word_generation>
+/ caption = "<% item.directions.item(1) %>"
+/ fontstyle =  ("Arial", 3%)
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=d1; 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10; 11=rb1; 12=rb2; 13=rb3; 14=rb4; 15=rb5; 16=rb6; 17=rb7; 18=rb8; 19=rb9; 20=rb10]
+/ navigationbuttonsize = (20, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (35%, values.textbox_offset + 10*values.textbox_gap)
+/ finishlabel = "Next Trial"
+/ branch = [
+	if (textbox.d1.response == "") trial.error1
+]
+/ branch = [
+	if (radiobuttons.rb1.response == "Maybe") trial.error1
+]
+</surveypage>
+
+<trial error1>
+/ stimulusframes = [1 = survey_error]
+/ timeout = 20000
+</trial>
+
+<trial pic_17soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	500 = gdg;
+	517 = mask1;
+	577 = mask2;
+	637 = mask3;
+	697 = mask4;
+	757 = mask5;
+]
+/ timeout = parameters.fixationduration + 17 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg.currentvalue;
+	values.soa = 17
+]
+/ recorddata = false
+</trial>
+
+<trial pic_33soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	500 = gdg;
+	533 = mask1;
+	593 = mask2;
+	653 = mask3;
+	713 = mask4;
+	773 = mask5;
+]
+/ timeout = parameters.fixationduration + 33 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg.currentvalue;
+	values.soa = 33
+]
+/ recorddata = false
+</trial>
+
+<trial pic_67soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	500 = gdg;
+	567 = mask1;
+	627 = mask2;
+	687 = mask3;
+	747 = mask4;
+	807 = mask5;
+]
+/ timeout = parameters.fixationduration + 67 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg.currentvalue;
+	values.soa = 67
+]
+/ recorddata = false
+</trial>
+
+<trial pic_133soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	500 = gdg;
+	633 = mask1;
+	693 = mask2;
+	753 = mask3;
+	813 = mask4;
+	873 = mask5;
+]
+/ timeout = parameters.fixationduration + 133 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg.currentvalue;
+	values.soa = 133
+]
+/ recorddata = false
+</trial>
+
+<trial pic_267soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	500 = gdg;
+	767 = mask1;
+	827 = mask2;
+	887 = mask3;
+	947 = mask4;
+	1007 = mask5;
+]
+/ timeout = parameters.fixationduration + 267 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg.currentvalue;
+	values.soa = 267
+]
+/ recorddata = false
+</trial>
+
+<trial pic_500soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	500 = gdg;
+	1000 = mask1;
+	1060 = mask2;
+	1120 = mask3;
+	1180 = mask4;
+	1240 = mask5;
+]
+/ timeout = parameters.fixationduration + 500 + (5 * 60)
+/branch = [surveypage.word_generation]
+/ontrialend = [
+	values.img_num = picture.gdg.currentvalue;
+	values.soa = 500
+]
+/ recorddata = false
+</trial>
+
+<htmlpage thanks>
+/ file = "complete.html"
+</htmlpage>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	BLOCKS
+**************************************************************************************************************
+**************************************************************************************************************
+
+<block GDG>
+/trials = [1-9 = noreplacenorepeat(pic_17soa,pic_17soa,pic_33soa,pic_67soa,pic_133soa,pic_133soa,pic_267soa,pic_267soa,pic_500soa)]
+</block>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT
+**************************************************************************************************************
+**************************************************************************************************************
+
+<expt>
+/blocks = [1 = GDG]
+/ preinstructions = (intro, exp_instructions)
+/ postinstructions = (thanks)
+/onexptend = [values.completed = 1]
+</expt>
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************

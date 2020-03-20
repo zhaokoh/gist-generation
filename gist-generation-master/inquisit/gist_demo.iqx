@@ -1,0 +1,617 @@
+﻿<usermanual>
+						
+									NATURAL SCENE GIST DESCRIPTORS GENERATION
+SCRIPT INFO
+
+Script Author: Zhao Hui Koh (This script is based on the diary script from Millisecond Software)
+last updated: 23-02-2019 by Zhao Hui Koh (zhkoh2@student.monash.edu)
+
+Note (by Millisecond Software):
+By default this script allows participants to move onto the next stimuli before the maximum
+time limit is up (but only after parameters.minstorytime).  To change that setting so that all participants have to wait until 
+the maximum time limit is up, go to TRIALS-> openended.story and follow further instructions.
+In general: Once the maximum time limit is up, the current story page closes and the next trial is started.
+
+Zhao thanks Millisecond Software for sharing this script!
+
+
+BACKGROUND INFO
+
+											*Purpose*
+This script implements a Gist Descriptor Generation tasi (GDG).											
+
+											  *Task*
+Participants are asked to do 8 picture story exercises. Each exercise presents a picture for 10s
+and then asks the participant to write a complete story about the picture. Participants have
+5 minutes for each story.
+
+DATA FILE INFORMATION: 
+The default data stored in the data files are:
+
+(1) Raw data file: 'PictureStoryExercise_raw*.iqdat' (a separate file for each participant)
+
+build:							Inquisit build
+computer.platform:				the platform the script was run on
+date, time, subject, group:		date and time script was run with the current subject/groupnumber 
+blockcode, blocknum:			the name and number of the current block
+trialcode, trialnum: 			the name and number of the currently recorded trial
+									(Note: not all trials that are run might record data; by default data is collected unless /recorddata = false is set for a particular trial/block) 
+response:						the participant's response (openended response)
+latency: 						the response latency
+
+(2) Summary data file: 'PictureStoryExercise_summary*.iqdat' (a separate file for each participant)
+
+script.startdate:				date script was run
+script.starttime:				time script was started
+script.subjectid:				subject id number
+script.groupid:					group id number
+script.elapsedtime:				time it took to run script (in ms)
+computer.platform:				the platform the script was run on
+/completed:						0 = script was not completed (prematurely aborted); 1 = script was completed (all conditions run)
+
+
+EXPERIMENTAL SET-UP
+* 8 pictures - order is determined randomly
+* pictures are presented for 10s
+* Then a textbox appears in which participants can enter the story
+* Participants have 5 minutes for each pic (warning are given shortly before participants are moved onto the next picture)
+
+STIMULI
+can be edited under section Editable Stimuli
+
+INSTRUCTIONS
+can be edited under section Editable Instructions
+
+EDITABLE CODE:
+check below for (relatively) easily editable parameters, stimuli, instructions etc. 
+Keep in mind that you can use this script as a template and therefore always "mess" with the entire code to further customize your experiment.
+
+The parameters you can change are:
+
+/fixationduration:				duration for the fixation cross
+</usermanual>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI: change editable stimuli here
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: The following needs to be generated using helper-scripts, otherwise you will be typing all day
+<parameters>
+/fixationduration = 1000
+/is_mturk = false
+/experiment_id = "GIST_BATCH_V1_DEMO"
+/skip_practice = true
+/skip_demographics = true
+/show_completion_block = false
+</parameters>
+
+<variables>
+/ group = (1 of 1) (items_67soa = picset)
+/ groupassignment = groupnumber
+</variables>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI: change editable stimuli here
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: The following needs to be generated using helper-scripts, otherwise you will be typing all day - see helper-scripts generate-inquisit-random_preconfigure.py
+
+***********************
+***********************
+
+<item picset>
+/1 = "im0000056.jpg"
+/2 = "im0000529.jpg"
+/3 = "im0004865.jpg"
+/4 = "im9999002.jpg"
+</item>
+
+<item practice_pictures>
+/1 = "im0000003.jpg"
+/2 = "im0000009.jpg"
+/3 = "im0000014.jpg"
+</item>
+
+<item masks>
+/1 = "mask1.jpg"
+/2 = "mask2.jpg"
+/3 = "mask3.jpg"
+/4 = "mask4.jpg"
+/5 = "mask5.jpg"
+</item>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE INSTRUCTIONS: change instructions here
+**************************************************************************************************************
+**************************************************************************************************************
+<instruct>
+/ fontstyle = ("Arial", 3%, false, false, false, false, 5, 1)
+</instruct>
+
+<htmlpage intro>
+/ file = "experiment_overview.html"
+</htmlpage>
+
+<htmlpage consent>
+/ file = "consent_form.html"
+</htmlpage>
+
+<htmlpage exp_instructions>
+/ file = "exp_instructions.html"
+</htmlpage>
+
+<item directions>
+/1 = "Going back to the image that you just saw, what words (nouns, verbs, adjectives) would you use to describe what you saw?"
+/2 = "Referring to the image that you just saw, what words would you use to describe your impression of the image?"
+</item>
+
+<item word_guidelines>
+/1 = "1. Must be a non-repeat and valid English word."
+/2 = "2. Nouns (e.g. ball, cat, apple), Verbs (e.g. run, play, jump), Adjectives (e.g. calm, exciting, beautiful)"
+/3 = "3. Please use the character '-' if you enter a phrase with spaces, for e.g. sunny-afternoon"
+/4 = "If you are unable to come up with all 5 words, please enter arbitrary words and select the button 'Don't Know' for the rest."
+</item>
+
+<item labels>
+/1 = "Words"
+/2 = "Confidence Ratings"
+</item>
+
+**************************************************************************************************************
+								!!!REMAINING CODE: Customize after careful consideration only!!!
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DEFAULTS
+**************************************************************************************************************
+**************************************************************************************************************
+script requires Inquisit 5.0.0.0 or higher
+
+<defaults>
+/ windowsize = (100%, 100%)
+/minimumversion = "5.0.0.0"
+
+/ txcolor = white
+/ screencolor = black
+/ fontstyle = ("Arial", 1.75%, false, false, false, false, 5, 1)
+</defaults>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	DATA
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: data file explanations under User Manual Information at the top
+
+********************
+raw data
+********************
+
+<data>
+/ separatefiles = true
+/ columns = (build, date, time, subject, blockcode, blocknum, trialcode, trialnum, stimulusonset, values.est_soa, values.est_soa2, values.est_soa3, values.est_soa4, values.est_soa5, values.img_num, values.img_file, values.soa, values.completion_code, response, latency)
+</data>
+
+********************
+summary data
+********************
+
+<summarydata>
+/columns = (script.startdate, script.starttime, script.subjectid, script.groupid, script.elapsedtime, computer.platform, computer.os, computer.countrycode, values.completed, parameters.experiment_id)
+/ separatefiles = true
+</summarydata>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+	VALUES: automatically updated
+*******************************************************************************************************************
+*******************************************************************************************************************
+/completed:				0 = script was not completed; 1 = script was completed (all conditions run)
+/essay:					stores the essay number (= picture itemnumber)
+
+<values>
+/completed = 0
+/img_num = 0
+/img_file = ""
+/soa = 0
+/completion_code = ""
+/trial_start = 0
+/est_soa = 0
+/est_soa2 = 0
+/est_soa3 = 0
+/est_soa4 = 0
+/est_soa5 = 0
+</values>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	STIMULI
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: this picture element controls the selection of the to be presented picture
+/select = noreplace => selects the pictures randomly without replacement
+if a sequential order is preferred => /select = sequential
+<picture gdg_67soa>
+/items = items_67soa
+/select = sequence
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture practice_stimuli>
+/items = practice_pictures
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+Note: The following represents five masks to be used after the picture stimulus
+<picture mask1>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask2>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask3>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask4>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100
+/size = (100%, 100%)
+</picture>
+
+<picture mask5>
+/items = masks
+/select = noreplacenorepeat
+/position = (50%, 50%)
+/ width = 100
+/ height = 100	
+/size = (100%, 100%)
+</picture>
+
+<text fixation_cross>
+/ items = ("+")
+/ txcolor = white
+/ txbgcolor = black
+/ vposition = 50%
+/ hposition = 50%
+/ fontstyle = ("Arial", 15%)
+</text>
+
+<text survey_error2>
+/ items= ("error = <% surveypage.word_generation.error %>")
+/ fontstyle = ("Arial", 1.74%, true, false, false, false, 5, 0)
+/ txbgcolor = white
+/ txcolor = red
+</text>
+
+<text survey_error>
+/ items= ("Error - Please enter 5 words and their confidence ratings.")
+/ fontstyle = ("Arial", 1.5%, true, false, false, false, 5, 0)
+/ txbgcolor = white
+/ txcolor = red
+/ position = (50%, 50%)
+</text>
+
+<text word_label>
+/ items = labels
+/ select = 1
+/ vposition = 20
+/ size = (100%, 10%)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<text conf_ratings_label>
+/ items = labels
+/ select = 2
+/ vposition = 80
+/ size = (100%, 10%)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<text completion_code>
+/items = ("Your Amazon Mechanical Turk Code: <%values.completion_code%>")
+/position = (50, 20)
+/halign = center
+/ valign = center
+/ hjustify = center
+/ vjustify = center
+/ txbgcolor = (0, 0, 0)
+/ fontstyle = ("Arial", 4.13%, false, false, false, false, 5, 0)
+/ txcolor = (255, 0, 0)
+</text>
+
+<text completion_code_instruction>
+/items = ("Please record/copy this completion code and paste it back to the Amazon Mechnical Turk Page.~nThank you again for participating in our study!~n~nPress <space> to end this experiment.")
+/position = (50, 40)
+/ txbgcolor = (0, 0, 0)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+/ txcolor = (255, 255, 255)
+</text>
+
+<caption input_validation_instruction>
+/ caption = "You must enter 5 words and their confidence ratings to proceed. Try your best!"
+/ position = (values.first_col, values.textbox_offset + 6*values.textbox_gap)
+/ fontstyle = ("Arial", 2.5%, false, false, false, false, 5, 0)
+/ subcaptionfontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_0>
+/ caption = "For a guide, here are the kind of words that you may enter:"
+/ position = (values.first_col, values.textbox_offset - 23)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_1>
+/ caption = "<% item.word_guidelines.item(1) %>"
+/ position = (values.first_col, values.textbox_offset - 20)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_2>
+/ caption = "<% item.word_guidelines.item(2) %>"
+/ position = (values.first_col, values.textbox_offset - 17)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_3>
+/ caption = "<% item.word_guidelines.item(3) %>"
+/ position = (values.first_col, values.textbox_offset - 14)
+/ fontstyle = ("Arial", 2%, false, false, false, false, 5, 0)
+</caption>
+
+<caption input_words_guideline_4>
+/ caption = "<% item.word_guidelines.item(4) %>"
+/ position = (values.first_col, values.textbox_offset - 11)
+/ fontstyle = ("Arial", 1.5%, false, false, false, false, 5, 0)
+</caption>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	TRIALS
+**************************************************************************************************************
+**************************************************************************************************************
+
+<values>
+/textbox_offset = 40
+/textbox_gap = 5
+/textbox_width = 20
+/textbox_height = 4
+/first_col = 15
+/second_col = 38
+
+/radiobuttons_offset = values.textbox_offset
+/radiobuttons_gap = 5
+/radiobuttons_textsize = 2%
+</values>
+
+<include>
+/file = "include_surveypage_inputs_no_validation.iqx"
+</include>
+
+<include>
+/file = "include_participant_demographics.iqx"
+</include>
+
+<item current_img>
+</item>
+
+<image i1>
+/items = current_img
+/imagesize = (100%, 100%)
+/position = (0, 0)
+</image>
+
+<survey response_screen>
+/pages = [1=word_generation;2=continue_page]
+/ showbackbutton = false
+/
+</survey>
+
+NOTE: 2=d2; 3=d3; 4=d4; 5=d5; 6=d6; 7=d7; 8=d8; 9=d9; 10=d10;
+NOTE: The 11 questions onwards are text to be displayed. 
+<surveypage word_generation>
+/ caption = "<% item.directions.item(2) %>"
+/ fontstyle =  ("Arial", 3%)
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=d1; 2=d2; 3=d3; 4=d4; 5=d5; 6=rb1; 7=rb2; 8=rb3; 9=rb4; 10=rb5; 11=input_words_guideline_0; 12=input_validation_instruction; 13=input_words_guideline_1; 14=input_words_guideline_2; 15=input_words_guideline_3; 16=input_words_guideline_4]
+/ navigationbuttonsize = (20, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (35%, values.textbox_offset + 8.5*values.textbox_gap)
+/ finishlabel = "Show Picture"
+/ response = correct
+</surveypage>
+
+<surveypage continue_page>
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ fontstyle =  ("Arial", 3%)
+/ questions = [1=i1]
+/ navigationbuttonsize = (20, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (35%, values.textbox_offset + 8*values.textbox_gap)
+/ finishlabel = "Get ready and focus on the +"
+</surveypage>
+
+<surveypage demographic_page>
+/ caption = "You have now finished the trials. Before you complete the experiment, we would like you to complete the following questions please."
+/ fontstyle =  ("Arial", 3%)
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=sex; 2=age; 3=nationality; 4=education; 5=first_language; 6=second_language; 7=number_of_years_english_speaking]
+/ navigationbuttonsize = (20, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (35%,  values.demo_starting_y_offset + 10*values.demo_gap)
+/ finishlabel = "Complete"
+/ response = correct
+</surveypage>
+
+<trial error>
+/ stimulusframes = [1 = survey_error]
+/ timeout = 1000
+</trial>
+
+**************************************************************************************************************
+	PRACTICE TRIALS
+**************************************************************************************************************
+
+
+**************************************************************************************************************
+	REAL TRIALS
+**************************************************************************************************************
+
+<trial pic_67soa>
+/ stimulustimes = [
+	0 = fixation_cross;
+	1000 = gdg_67soa;
+	1133 = mask1;
+	1193 = mask2;
+	1253 = mask3;
+	1313 = mask4;
+	1373 = mask5;
+]
+/ timeout = parameters.fixationduration + 133 + (5 * 60)
+/ontrialend = [
+	values.img_num = picture.gdg_67soa.currentvalue;
+	values.img_file = picture.gdg_67soa.currentitem;
+	values.soa = 133;
+	values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_67soa.stimulusonset.1;
+	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
+	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
+	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
+	values.est_soa5 = picture.mask5.stimulusonset.1 - picture.mask4.stimulusonset.1;
+	item.current_img.item = picture.gdg_67soa.currentitem;
+]
+/ recorddata = true
+</trial>
+
+
+<trial mturk_completion_code>
+/ ontrialbegin = [values.completion_code=ipart(rand(1,99999))]
+/ stimulustimes = [0=completion_code, completion_code_instruction]
+/ inputdevice = keyboard
+/ correctresponse = (" ")
+/ skip = [parameters.is_mturk == false]
+</trial>
+
+<htmlpage thanks>
+/ file = "complete.html"
+</htmlpage>
+
+<htmlpage complete_block>
+/ file = "complete_block.html"
+</htmlpage>
+
+<htmlpage practice_prepage>
+/ file = "practice_prepage.html"
+</htmlpage>
+
+<htmlpage block1_prepage>
+/ file = "block1_prepage.html"
+</htmlpage>
+
+<htmlpage block2_prepage>
+/ file = "block2_prepage.html"
+</htmlpage>
+
+<htmlpage block3_prepage>
+/ file = "block3_prepage.html"
+</htmlpage>
+
+<htmlpage block4_prepage>
+/ file = "block4_prepage.html"
+</htmlpage>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	BLOCKS "include_blocks_standard.iqx"
+**************************************************************************************************************
+**************************************************************************************************************
+
+<block block1>
+/trials = [1 = replace(pic_67soa);2=surveypage.word_generation;3=surveypage.continue_page]
+</block>
+
+
+<block intro>
+/ preinstructions = (intro)
+/ skip = [parameters.is_mturk == false]
+</block>
+
+<block consent>
+/ preinstructions = (consent)
+/ skip = [parameters.is_mturk == false]
+</block>
+
+<block completion>
+/trials = [1=mturk_completion_code]
+/ preinstructions = (thanks)
+/ skip = [parameters.show_completion_block == true]
+</block>
+
+<block completion_block>
+/ preinstructions = (complete_block)
+/ skip = [parameters.show_completion_block == false]
+</block>
+
+<block demographics>
+/trials = [1=demographic_page]	
+/ skip = [parameters.skip_demographics == true]
+</block>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EXPERIMENT
+**************************************************************************************************************
+**************************************************************************************************************
+
+NOTE: /blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = demographics; 6 = completion]
+
+<expt>
+/onexptend = [values.completed = 1]
+/blocks = [1 = intro; 2 = consent; 3-42 = block1]
+</expt>
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************
