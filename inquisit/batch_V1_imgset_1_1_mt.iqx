@@ -14,7 +14,7 @@
 </parameters>
 
 <variables>
-/ group = (1 of 30) (items_133soa = picset_133_1)
+/ group = (1 of 30) (items_67soa = picset_67_1, items_133soa = picset_133_1, items_267soa = picset_267_1)
 / group = (2 of 30) (items_67soa = picset_67_2, items_133soa = picset_133_2, items_267soa = picset_267_2)
 / group = (3 of 30) (items_67soa = picset_67_3, items_133soa = picset_133_3, items_267soa = picset_267_3)
 / group = (4 of 30) (items_67soa = picset_67_4, items_133soa = picset_133_4, items_267soa = picset_267_4)
@@ -58,31 +58,33 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 ***********************
 ***********************
 
-
-
-<item picset_133_1>
-/1="SquareCongruent_001.jpg"
-/2="SquareCongruent_002.jpg"
-/3="SquareCongruent_003.jpg"
-/4="SquareCongruent_004.jpg"
-/5="SquareCongruent_005.jpg"
-/6="SquareCongruent_006.jpg"
-/7="SquareCongruent_007.jpg"
-/8="SquareCongruent_008.jpg"
-/9="SquareCongruent_009.jpg"
-/10="SquareCongruent_010.jpg"
-/11="SquareIncongruent_011.jpg"
-/12="SquareIncongruent_012.jpg"
-/13="SquareIncongruent_013.jpg"
-/14="SquareIncongruent_014.jpg"
-/15="SquareIncongruent_015.jpg"
-/16="SquareIncongruent_016.jpg"
-/17="SquareIncongruent_017.jpg"
-/18="SquareIncongruent_018.jpg"
-/19="SquareIncongruent_019.jpg"
-/20="SquareIncongruent_020.jpg"
+<item picset_67_1>
+/1 = "im0001937.jpg"
+/2 = "im0001185.jpg"
+/3 = "im0001734.jpg"
+/4 = "im0001737.jpg"
+/5 = "im0001402.jpg"
+/6 = "im0001820.jpg"
+/7 = "im0001719.jpg"
 </item>
-
+<item picset_133_1>
+/1 = "im0001277.jpg"
+/2 = "im0008010.jpg"
+/3 = "im0003315.jpg"
+/4 = "im0003988.jpg"
+/5 = "im0002487.jpg"
+/6 = "im0004531.jpg"
+/7 = "im0009091.jpg"
+</item>
+<item picset_267_1>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
 <item picset_67_2>
 /1 = "im0001277.jpg"
 /2 = "im0008010.jpg"
@@ -870,7 +872,7 @@ Note: The following needs to be generated using helper-scripts, otherwise you wi
 
 
 <include>
-/ file = "gist.iqx"
+/file = "gist.iqx"
 </include>
 
 **************************************************************************************************************
