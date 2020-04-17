@@ -1,0 +1,880 @@
+﻿**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE PARAMETERS: change editable parameters here
+**************************************************************************************************************
+**************************************************************************************************************
+
+<parameters>
+/fixationduration = 1000
+/is_mturk = false
+/experiment_id = "GIST_BATCH_V1_1_1_LB"
+/skip_practice = false
+/skip_demographics = true
+/show_completion_block = true
+</parameters>
+
+<variables>
+/ group = (1 of 30) (items_67soa = picset_67_1, items_133soa = picset_133_1, items_267soa = picset_267_1)
+/ group = (2 of 30) (items_67soa = picset_67_2, items_133soa = picset_133_2, items_267soa = picset_267_2)
+/ group = (3 of 30) (items_67soa = picset_67_3, items_133soa = picset_133_3, items_267soa = picset_267_3)
+/ group = (4 of 30) (items_67soa = picset_67_4, items_133soa = picset_133_4, items_267soa = picset_267_4)
+/ group = (5 of 30) (items_67soa = picset_67_5, items_133soa = picset_133_5, items_267soa = picset_267_5)
+/ group = (6 of 30) (items_67soa = picset_67_6, items_133soa = picset_133_6, items_267soa = picset_267_6)
+/ group = (7 of 30) (items_67soa = picset_67_7, items_133soa = picset_133_7, items_267soa = picset_267_7)
+/ group = (8 of 30) (items_67soa = picset_67_8, items_133soa = picset_133_8, items_267soa = picset_267_8)
+/ group = (9 of 30) (items_67soa = picset_67_9, items_133soa = picset_133_9, items_267soa = picset_267_9)
+/ group = (10 of 30) (items_67soa = picset_67_10, items_133soa = picset_133_10, items_267soa = picset_267_10)
+/ group = (11 of 30) (items_67soa = picset_67_11, items_133soa = picset_133_11, items_267soa = picset_267_11)
+/ group = (12 of 30) (items_67soa = picset_67_12, items_133soa = picset_133_12, items_267soa = picset_267_12)
+/ group = (13 of 30) (items_67soa = picset_67_13, items_133soa = picset_133_13, items_267soa = picset_267_13)
+/ group = (14 of 30) (items_67soa = picset_67_14, items_133soa = picset_133_14, items_267soa = picset_267_14)
+/ group = (15 of 30) (items_67soa = picset_67_15, items_133soa = picset_133_15, items_267soa = picset_267_15)
+/ group = (16 of 30) (items_67soa = picset_67_16, items_133soa = picset_133_16, items_267soa = picset_267_16)
+/ group = (17 of 30) (items_67soa = picset_67_17, items_133soa = picset_133_17, items_267soa = picset_267_17)
+/ group = (18 of 30) (items_67soa = picset_67_18, items_133soa = picset_133_18, items_267soa = picset_267_18)
+/ group = (19 of 30) (items_67soa = picset_67_19, items_133soa = picset_133_19, items_267soa = picset_267_19)
+/ group = (20 of 30) (items_67soa = picset_67_20, items_133soa = picset_133_20, items_267soa = picset_267_20)
+/ group = (21 of 30) (items_67soa = picset_67_21, items_133soa = picset_133_21, items_267soa = picset_267_21)
+/ group = (22 of 30) (items_67soa = picset_67_22, items_133soa = picset_133_22, items_267soa = picset_267_22)
+/ group = (23 of 30) (items_67soa = picset_67_23, items_133soa = picset_133_23, items_267soa = picset_267_23)
+/ group = (24 of 30) (items_67soa = picset_67_24, items_133soa = picset_133_24, items_267soa = picset_267_24)
+/ group = (25 of 30) (items_67soa = picset_67_25, items_133soa = picset_133_25, items_267soa = picset_267_25)
+/ group = (26 of 30) (items_67soa = picset_67_26, items_133soa = picset_133_26, items_267soa = picset_267_26)
+/ group = (27 of 30) (items_67soa = picset_67_27, items_133soa = picset_133_27, items_267soa = picset_267_27)
+/ group = (28 of 30) (items_67soa = picset_67_28, items_133soa = picset_133_28, items_267soa = picset_267_28)
+/ group = (29 of 30) (items_67soa = picset_67_29, items_133soa = picset_133_29, items_267soa = picset_267_29)
+/ group = (30 of 30) (items_67soa = picset_67_30, items_133soa = picset_133_30, items_267soa = picset_267_30)
+/ groupassignment = groupnumber
+</variables>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI: change editable stimuli here
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: The following needs to be generated using helper-scripts, otherwise you will be typing all day - see helper-scripts generate-inquisit-random_preconfigure.py
+
+***********************
+***********************
+
+<item picset_67_1>
+/1 = "im0001937.jpg"
+/2 = "im0001185.jpg"
+/3 = "im0001734.jpg"
+/4 = "im0001737.jpg"
+/5 = "im0001402.jpg"
+/6 = "im0001820.jpg"
+/7 = "im0001719.jpg"
+</item>
+<item picset_133_1>
+/1 = "im0001277.jpg"
+/2 = "im0008010.jpg"
+/3 = "im0003315.jpg"
+/4 = "im0003988.jpg"
+/5 = "im0002487.jpg"
+/6 = "im0004531.jpg"
+/7 = "im0009091.jpg"
+</item>
+<item picset_267_1>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
+<item picset_67_2>
+/1 = "im0001277.jpg"
+/2 = "im0008010.jpg"
+/3 = "im0003315.jpg"
+/4 = "im0003988.jpg"
+/5 = "im0002487.jpg"
+/6 = "im0004531.jpg"
+/7 = "im0009091.jpg"
+</item>
+<item picset_133_2>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
+<item picset_267_2>
+/1 = "im0001185.jpg"
+/2 = "im0001734.jpg"
+/3 = "im0001737.jpg"
+/4 = "im0001402.jpg"
+/5 = "im0001820.jpg"
+/6 = "im0001719.jpg"
+/7 = "im0001937.jpg"
+</item>
+<item picset_67_3>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
+<item picset_133_3>
+/1 = "im0001185.jpg"
+/2 = "im0001734.jpg"
+/3 = "im0001737.jpg"
+/4 = "im0001402.jpg"
+/5 = "im0001820.jpg"
+/6 = "im0001719.jpg"
+/7 = "im0001937.jpg"
+</item>
+<item picset_267_3>
+/1 = "im0008010.jpg"
+/2 = "im0003315.jpg"
+/3 = "im0003988.jpg"
+/4 = "im0002487.jpg"
+/5 = "im0004531.jpg"
+/6 = "im0009091.jpg"
+/7 = "im0001277.jpg"
+</item>
+<item picset_67_4>
+/1 = "im0001185.jpg"
+/2 = "im0001734.jpg"
+/3 = "im0001737.jpg"
+/4 = "im0001402.jpg"
+/5 = "im0001820.jpg"
+/6 = "im0001719.jpg"
+/7 = "im0001937.jpg"
+</item>
+<item picset_133_4>
+/1 = "im0008010.jpg"
+/2 = "im0003315.jpg"
+/3 = "im0003988.jpg"
+/4 = "im0002487.jpg"
+/5 = "im0004531.jpg"
+/6 = "im0009091.jpg"
+/7 = "im0001277.jpg"
+</item>
+<item picset_267_4>
+/1 = "im0001631.jpg"
+/2 = "im0002415.jpg"
+/3 = "im0002141.jpg"
+/4 = "im0000638.jpg"
+/5 = "im0000721.jpg"
+/6 = "im0000550.jpg"
+/7 = "im0001744.jpg"
+</item>
+<item picset_67_5>
+/1 = "im0008010.jpg"
+/2 = "im0003315.jpg"
+/3 = "im0003988.jpg"
+/4 = "im0002487.jpg"
+/5 = "im0004531.jpg"
+/6 = "im0009091.jpg"
+/7 = "im0001277.jpg"
+</item>
+<item picset_133_5>
+/1 = "im0001631.jpg"
+/2 = "im0002415.jpg"
+/3 = "im0002141.jpg"
+/4 = "im0000638.jpg"
+/5 = "im0000721.jpg"
+/6 = "im0000550.jpg"
+/7 = "im0001744.jpg"
+</item>
+<item picset_267_5>
+/1 = "im0001734.jpg"
+/2 = "im0001737.jpg"
+/3 = "im0001402.jpg"
+/4 = "im0001820.jpg"
+/5 = "im0001719.jpg"
+/6 = "im0001937.jpg"
+/7 = "im0001185.jpg"
+</item>
+<item picset_67_6>
+/1 = "im0001631.jpg"
+/2 = "im0002415.jpg"
+/3 = "im0002141.jpg"
+/4 = "im0000638.jpg"
+/5 = "im0000721.jpg"
+/6 = "im0000550.jpg"
+/7 = "im0001744.jpg"
+</item>
+<item picset_133_6>
+/1 = "im0001734.jpg"
+/2 = "im0001737.jpg"
+/3 = "im0001402.jpg"
+/4 = "im0001820.jpg"
+/5 = "im0001719.jpg"
+/6 = "im0001937.jpg"
+/7 = "im0001185.jpg"
+</item>
+<item picset_267_6>
+/1 = "im0003315.jpg"
+/2 = "im0003988.jpg"
+/3 = "im0002487.jpg"
+/4 = "im0004531.jpg"
+/5 = "im0009091.jpg"
+/6 = "im0001277.jpg"
+/7 = "im0008010.jpg"
+</item>
+<item picset_67_7>
+/1 = "im0001734.jpg"
+/2 = "im0001737.jpg"
+/3 = "im0001402.jpg"
+/4 = "im0001820.jpg"
+/5 = "im0001719.jpg"
+/6 = "im0001937.jpg"
+/7 = "im0001185.jpg"
+</item>
+<item picset_133_7>
+/1 = "im0003315.jpg"
+/2 = "im0003988.jpg"
+/3 = "im0002487.jpg"
+/4 = "im0004531.jpg"
+/5 = "im0009091.jpg"
+/6 = "im0001277.jpg"
+/7 = "im0008010.jpg"
+</item>
+<item picset_267_7>
+/1 = "im0002415.jpg"
+/2 = "im0002141.jpg"
+/3 = "im0000638.jpg"
+/4 = "im0000721.jpg"
+/5 = "im0000550.jpg"
+/6 = "im0001744.jpg"
+/7 = "im0001631.jpg"
+</item>
+<item picset_67_8>
+/1 = "im0003315.jpg"
+/2 = "im0003988.jpg"
+/3 = "im0002487.jpg"
+/4 = "im0004531.jpg"
+/5 = "im0009091.jpg"
+/6 = "im0001277.jpg"
+/7 = "im0008010.jpg"
+</item>
+<item picset_133_8>
+/1 = "im0002415.jpg"
+/2 = "im0002141.jpg"
+/3 = "im0000638.jpg"
+/4 = "im0000721.jpg"
+/5 = "im0000550.jpg"
+/6 = "im0001744.jpg"
+/7 = "im0001631.jpg"
+</item>
+<item picset_267_8>
+/1 = "im0001737.jpg"
+/2 = "im0001402.jpg"
+/3 = "im0001820.jpg"
+/4 = "im0001719.jpg"
+/5 = "im0001937.jpg"
+/6 = "im0001185.jpg"
+/7 = "im0001734.jpg"
+</item>
+<item picset_67_9>
+/1 = "im0002415.jpg"
+/2 = "im0002141.jpg"
+/3 = "im0000638.jpg"
+/4 = "im0000721.jpg"
+/5 = "im0000550.jpg"
+/6 = "im0001744.jpg"
+/7 = "im0001631.jpg"
+</item>
+<item picset_133_9>
+/1 = "im0001737.jpg"
+/2 = "im0001402.jpg"
+/3 = "im0001820.jpg"
+/4 = "im0001719.jpg"
+/5 = "im0001937.jpg"
+/6 = "im0001185.jpg"
+/7 = "im0001734.jpg"
+</item>
+<item picset_267_9>
+/1 = "im0003988.jpg"
+/2 = "im0002487.jpg"
+/3 = "im0004531.jpg"
+/4 = "im0009091.jpg"
+/5 = "im0001277.jpg"
+/6 = "im0008010.jpg"
+/7 = "im0003315.jpg"
+</item>
+<item picset_67_10>
+/1 = "im0001737.jpg"
+/2 = "im0001402.jpg"
+/3 = "im0001820.jpg"
+/4 = "im0001719.jpg"
+/5 = "im0001937.jpg"
+/6 = "im0001185.jpg"
+/7 = "im0001734.jpg"
+</item>
+<item picset_133_10>
+/1 = "im0003988.jpg"
+/2 = "im0002487.jpg"
+/3 = "im0004531.jpg"
+/4 = "im0009091.jpg"
+/5 = "im0001277.jpg"
+/6 = "im0008010.jpg"
+/7 = "im0003315.jpg"
+</item>
+<item picset_267_10>
+/1 = "im0002141.jpg"
+/2 = "im0000638.jpg"
+/3 = "im0000721.jpg"
+/4 = "im0000550.jpg"
+/5 = "im0001744.jpg"
+/6 = "im0001631.jpg"
+/7 = "im0002415.jpg"
+</item>
+<item picset_67_11>
+/1 = "im0003988.jpg"
+/2 = "im0002487.jpg"
+/3 = "im0004531.jpg"
+/4 = "im0009091.jpg"
+/5 = "im0001277.jpg"
+/6 = "im0008010.jpg"
+/7 = "im0003315.jpg"
+</item>
+<item picset_133_11>
+/1 = "im0002141.jpg"
+/2 = "im0000638.jpg"
+/3 = "im0000721.jpg"
+/4 = "im0000550.jpg"
+/5 = "im0001744.jpg"
+/6 = "im0001631.jpg"
+/7 = "im0002415.jpg"
+</item>
+<item picset_267_11>
+/1 = "im0001402.jpg"
+/2 = "im0001820.jpg"
+/3 = "im0001719.jpg"
+/4 = "im0001937.jpg"
+/5 = "im0001185.jpg"
+/6 = "im0001734.jpg"
+/7 = "im0001737.jpg"
+</item>
+<item picset_67_12>
+/1 = "im0002141.jpg"
+/2 = "im0000638.jpg"
+/3 = "im0000721.jpg"
+/4 = "im0000550.jpg"
+/5 = "im0001744.jpg"
+/6 = "im0001631.jpg"
+/7 = "im0002415.jpg"
+</item>
+<item picset_133_12>
+/1 = "im0001402.jpg"
+/2 = "im0001820.jpg"
+/3 = "im0001719.jpg"
+/4 = "im0001937.jpg"
+/5 = "im0001185.jpg"
+/6 = "im0001734.jpg"
+/7 = "im0001737.jpg"
+</item>
+<item picset_267_12>
+/1 = "im0002487.jpg"
+/2 = "im0004531.jpg"
+/3 = "im0009091.jpg"
+/4 = "im0001277.jpg"
+/5 = "im0008010.jpg"
+/6 = "im0003315.jpg"
+/7 = "im0003988.jpg"
+</item>
+<item picset_67_13>
+/1 = "im0001402.jpg"
+/2 = "im0001820.jpg"
+/3 = "im0001719.jpg"
+/4 = "im0001937.jpg"
+/5 = "im0001185.jpg"
+/6 = "im0001734.jpg"
+/7 = "im0001737.jpg"
+</item>
+<item picset_133_13>
+/1 = "im0002487.jpg"
+/2 = "im0004531.jpg"
+/3 = "im0009091.jpg"
+/4 = "im0001277.jpg"
+/5 = "im0008010.jpg"
+/6 = "im0003315.jpg"
+/7 = "im0003988.jpg"
+</item>
+<item picset_267_13>
+/1 = "im0000638.jpg"
+/2 = "im0000721.jpg"
+/3 = "im0000550.jpg"
+/4 = "im0001744.jpg"
+/5 = "im0001631.jpg"
+/6 = "im0002415.jpg"
+/7 = "im0002141.jpg"
+</item>
+<item picset_67_14>
+/1 = "im0002487.jpg"
+/2 = "im0004531.jpg"
+/3 = "im0009091.jpg"
+/4 = "im0001277.jpg"
+/5 = "im0008010.jpg"
+/6 = "im0003315.jpg"
+/7 = "im0003988.jpg"
+</item>
+<item picset_133_14>
+/1 = "im0000638.jpg"
+/2 = "im0000721.jpg"
+/3 = "im0000550.jpg"
+/4 = "im0001744.jpg"
+/5 = "im0001631.jpg"
+/6 = "im0002415.jpg"
+/7 = "im0002141.jpg"
+</item>
+<item picset_267_14>
+/1 = "im0001820.jpg"
+/2 = "im0001719.jpg"
+/3 = "im0001937.jpg"
+/4 = "im0001185.jpg"
+/5 = "im0001734.jpg"
+/6 = "im0001737.jpg"
+/7 = "im0001402.jpg"
+</item>
+<item picset_67_15>
+/1 = "im0000638.jpg"
+/2 = "im0000721.jpg"
+/3 = "im0000550.jpg"
+/4 = "im0001744.jpg"
+/5 = "im0001631.jpg"
+/6 = "im0002415.jpg"
+/7 = "im0002141.jpg"
+</item>
+<item picset_133_15>
+/1 = "im0001820.jpg"
+/2 = "im0001719.jpg"
+/3 = "im0001937.jpg"
+/4 = "im0001185.jpg"
+/5 = "im0001734.jpg"
+/6 = "im0001737.jpg"
+/7 = "im0001402.jpg"
+</item>
+<item picset_267_15>
+/1 = "im0004531.jpg"
+/2 = "im0009091.jpg"
+/3 = "im0001277.jpg"
+/4 = "im0008010.jpg"
+/5 = "im0003315.jpg"
+/6 = "im0003988.jpg"
+/7 = "im0002487.jpg"
+</item>
+<item picset_67_16>
+/1 = "im0001820.jpg"
+/2 = "im0001719.jpg"
+/3 = "im0001937.jpg"
+/4 = "im0001185.jpg"
+/5 = "im0001734.jpg"
+/6 = "im0001737.jpg"
+/7 = "im0001402.jpg"
+</item>
+<item picset_133_16>
+/1 = "im0004531.jpg"
+/2 = "im0009091.jpg"
+/3 = "im0001277.jpg"
+/4 = "im0008010.jpg"
+/5 = "im0003315.jpg"
+/6 = "im0003988.jpg"
+/7 = "im0002487.jpg"
+</item>
+<item picset_267_16>
+/1 = "im0000721.jpg"
+/2 = "im0000550.jpg"
+/3 = "im0001744.jpg"
+/4 = "im0001631.jpg"
+/5 = "im0002415.jpg"
+/6 = "im0002141.jpg"
+/7 = "im0000638.jpg"
+</item>
+<item picset_67_17>
+/1 = "im0004531.jpg"
+/2 = "im0009091.jpg"
+/3 = "im0001277.jpg"
+/4 = "im0008010.jpg"
+/5 = "im0003315.jpg"
+/6 = "im0003988.jpg"
+/7 = "im0002487.jpg"
+</item>
+<item picset_133_17>
+/1 = "im0000721.jpg"
+/2 = "im0000550.jpg"
+/3 = "im0001744.jpg"
+/4 = "im0001631.jpg"
+/5 = "im0002415.jpg"
+/6 = "im0002141.jpg"
+/7 = "im0000638.jpg"
+</item>
+<item picset_267_17>
+/1 = "im0001719.jpg"
+/2 = "im0001937.jpg"
+/3 = "im0001185.jpg"
+/4 = "im0001734.jpg"
+/5 = "im0001737.jpg"
+/6 = "im0001402.jpg"
+/7 = "im0001820.jpg"
+</item>
+<item picset_67_18>
+/1 = "im0000721.jpg"
+/2 = "im0000550.jpg"
+/3 = "im0001744.jpg"
+/4 = "im0001631.jpg"
+/5 = "im0002415.jpg"
+/6 = "im0002141.jpg"
+/7 = "im0000638.jpg"
+</item>
+<item picset_133_18>
+/1 = "im0001719.jpg"
+/2 = "im0001937.jpg"
+/3 = "im0001185.jpg"
+/4 = "im0001734.jpg"
+/5 = "im0001737.jpg"
+/6 = "im0001402.jpg"
+/7 = "im0001820.jpg"
+</item>
+<item picset_267_18>
+/1 = "im0009091.jpg"
+/2 = "im0001277.jpg"
+/3 = "im0008010.jpg"
+/4 = "im0003315.jpg"
+/5 = "im0003988.jpg"
+/6 = "im0002487.jpg"
+/7 = "im0004531.jpg"
+</item>
+<item picset_67_19>
+/1 = "im0001719.jpg"
+/2 = "im0001937.jpg"
+/3 = "im0001185.jpg"
+/4 = "im0001734.jpg"
+/5 = "im0001737.jpg"
+/6 = "im0001402.jpg"
+/7 = "im0001820.jpg"
+</item>
+<item picset_133_19>
+/1 = "im0009091.jpg"
+/2 = "im0001277.jpg"
+/3 = "im0008010.jpg"
+/4 = "im0003315.jpg"
+/5 = "im0003988.jpg"
+/6 = "im0002487.jpg"
+/7 = "im0004531.jpg"
+</item>
+<item picset_267_19>
+/1 = "im0000550.jpg"
+/2 = "im0001744.jpg"
+/3 = "im0001631.jpg"
+/4 = "im0002415.jpg"
+/5 = "im0002141.jpg"
+/6 = "im0000638.jpg"
+/7 = "im0000721.jpg"
+</item>
+<item picset_67_20>
+/1 = "im0009091.jpg"
+/2 = "im0001277.jpg"
+/3 = "im0008010.jpg"
+/4 = "im0003315.jpg"
+/5 = "im0003988.jpg"
+/6 = "im0002487.jpg"
+/7 = "im0004531.jpg"
+</item>
+<item picset_133_20>
+/1 = "im0000550.jpg"
+/2 = "im0001744.jpg"
+/3 = "im0001631.jpg"
+/4 = "im0002415.jpg"
+/5 = "im0002141.jpg"
+/6 = "im0000638.jpg"
+/7 = "im0000721.jpg"
+</item>
+<item picset_267_20>
+/1 = "im0001937.jpg"
+/2 = "im0001185.jpg"
+/3 = "im0001734.jpg"
+/4 = "im0001737.jpg"
+/5 = "im0001402.jpg"
+/6 = "im0001820.jpg"
+/7 = "im0001719.jpg"
+</item>
+<item picset_67_21>
+/1 = "im0000550.jpg"
+/2 = "im0001744.jpg"
+/3 = "im0001631.jpg"
+/4 = "im0002415.jpg"
+/5 = "im0002141.jpg"
+/6 = "im0000638.jpg"
+/7 = "im0000721.jpg"
+</item>
+<item picset_133_21>
+/1 = "im0001937.jpg"
+/2 = "im0001185.jpg"
+/3 = "im0001734.jpg"
+/4 = "im0001737.jpg"
+/5 = "im0001402.jpg"
+/6 = "im0001820.jpg"
+/7 = "im0001719.jpg"
+</item>
+<item picset_267_21>
+/1 = "im0001277.jpg"
+/2 = "im0008010.jpg"
+/3 = "im0003315.jpg"
+/4 = "im0003988.jpg"
+/5 = "im0002487.jpg"
+/6 = "im0004531.jpg"
+/7 = "im0009091.jpg"
+</item>
+<item picset_67_22>
+/1 = "im0001937.jpg"
+/2 = "im0001185.jpg"
+/3 = "im0001734.jpg"
+/4 = "im0001737.jpg"
+/5 = "im0001402.jpg"
+/6 = "im0001820.jpg"
+/7 = "im0001719.jpg"
+</item>
+<item picset_133_22>
+/1 = "im0001277.jpg"
+/2 = "im0008010.jpg"
+/3 = "im0003315.jpg"
+/4 = "im0003988.jpg"
+/5 = "im0002487.jpg"
+/6 = "im0004531.jpg"
+/7 = "im0009091.jpg"
+</item>
+<item picset_267_22>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
+<item picset_67_23>
+/1 = "im0001277.jpg"
+/2 = "im0008010.jpg"
+/3 = "im0003315.jpg"
+/4 = "im0003988.jpg"
+/5 = "im0002487.jpg"
+/6 = "im0004531.jpg"
+/7 = "im0009091.jpg"
+</item>
+<item picset_133_23>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
+<item picset_267_23>
+/1 = "im0001185.jpg"
+/2 = "im0001734.jpg"
+/3 = "im0001737.jpg"
+/4 = "im0001402.jpg"
+/5 = "im0001820.jpg"
+/6 = "im0001719.jpg"
+/7 = "im0001937.jpg"
+</item>
+<item picset_67_24>
+/1 = "im0001744.jpg"
+/2 = "im0001631.jpg"
+/3 = "im0002415.jpg"
+/4 = "im0002141.jpg"
+/5 = "im0000638.jpg"
+/6 = "im0000721.jpg"
+/7 = "im0000550.jpg"
+</item>
+<item picset_133_24>
+/1 = "im0001185.jpg"
+/2 = "im0001734.jpg"
+/3 = "im0001737.jpg"
+/4 = "im0001402.jpg"
+/5 = "im0001820.jpg"
+/6 = "im0001719.jpg"
+/7 = "im0001937.jpg"
+</item>
+<item picset_267_24>
+/1 = "im0008010.jpg"
+/2 = "im0003315.jpg"
+/3 = "im0003988.jpg"
+/4 = "im0002487.jpg"
+/5 = "im0004531.jpg"
+/6 = "im0009091.jpg"
+/7 = "im0001277.jpg"
+</item>
+<item picset_67_25>
+/1 = "im0001185.jpg"
+/2 = "im0001734.jpg"
+/3 = "im0001737.jpg"
+/4 = "im0001402.jpg"
+/5 = "im0001820.jpg"
+/6 = "im0001719.jpg"
+/7 = "im0001937.jpg"
+</item>
+<item picset_133_25>
+/1 = "im0008010.jpg"
+/2 = "im0003315.jpg"
+/3 = "im0003988.jpg"
+/4 = "im0002487.jpg"
+/5 = "im0004531.jpg"
+/6 = "im0009091.jpg"
+/7 = "im0001277.jpg"
+</item>
+<item picset_267_25>
+/1 = "im0001631.jpg"
+/2 = "im0002415.jpg"
+/3 = "im0002141.jpg"
+/4 = "im0000638.jpg"
+/5 = "im0000721.jpg"
+/6 = "im0000550.jpg"
+/7 = "im0001744.jpg"
+</item>
+<item picset_67_26>
+/1 = "im0008010.jpg"
+/2 = "im0003315.jpg"
+/3 = "im0003988.jpg"
+/4 = "im0002487.jpg"
+/5 = "im0004531.jpg"
+/6 = "im0009091.jpg"
+/7 = "im0001277.jpg"
+</item>
+<item picset_133_26>
+/1 = "im0001631.jpg"
+/2 = "im0002415.jpg"
+/3 = "im0002141.jpg"
+/4 = "im0000638.jpg"
+/5 = "im0000721.jpg"
+/6 = "im0000550.jpg"
+/7 = "im0001744.jpg"
+</item>
+<item picset_267_26>
+/1 = "im0001734.jpg"
+/2 = "im0001737.jpg"
+/3 = "im0001402.jpg"
+/4 = "im0001820.jpg"
+/5 = "im0001719.jpg"
+/6 = "im0001937.jpg"
+/7 = "im0001185.jpg"
+</item>
+<item picset_67_27>
+/1 = "im0001631.jpg"
+/2 = "im0002415.jpg"
+/3 = "im0002141.jpg"
+/4 = "im0000638.jpg"
+/5 = "im0000721.jpg"
+/6 = "im0000550.jpg"
+/7 = "im0001744.jpg"
+</item>
+<item picset_133_27>
+/1 = "im0001734.jpg"
+/2 = "im0001737.jpg"
+/3 = "im0001402.jpg"
+/4 = "im0001820.jpg"
+/5 = "im0001719.jpg"
+/6 = "im0001937.jpg"
+/7 = "im0001185.jpg"
+</item>
+<item picset_267_27>
+/1 = "im0003315.jpg"
+/2 = "im0003988.jpg"
+/3 = "im0002487.jpg"
+/4 = "im0004531.jpg"
+/5 = "im0009091.jpg"
+/6 = "im0001277.jpg"
+/7 = "im0008010.jpg"
+</item>
+<item picset_67_28>
+/1 = "im0001734.jpg"
+/2 = "im0001737.jpg"
+/3 = "im0001402.jpg"
+/4 = "im0001820.jpg"
+/5 = "im0001719.jpg"
+/6 = "im0001937.jpg"
+/7 = "im0001185.jpg"
+</item>
+<item picset_133_28>
+/1 = "im0003315.jpg"
+/2 = "im0003988.jpg"
+/3 = "im0002487.jpg"
+/4 = "im0004531.jpg"
+/5 = "im0009091.jpg"
+/6 = "im0001277.jpg"
+/7 = "im0008010.jpg"
+</item>
+<item picset_267_28>
+/1 = "im0002415.jpg"
+/2 = "im0002141.jpg"
+/3 = "im0000638.jpg"
+/4 = "im0000721.jpg"
+/5 = "im0000550.jpg"
+/6 = "im0001744.jpg"
+/7 = "im0001631.jpg"
+</item>
+<item picset_67_29>
+/1 = "im0003315.jpg"
+/2 = "im0003988.jpg"
+/3 = "im0002487.jpg"
+/4 = "im0004531.jpg"
+/5 = "im0009091.jpg"
+/6 = "im0001277.jpg"
+/7 = "im0008010.jpg"
+</item>
+<item picset_133_29>
+/1 = "im0002415.jpg"
+/2 = "im0002141.jpg"
+/3 = "im0000638.jpg"
+/4 = "im0000721.jpg"
+/5 = "im0000550.jpg"
+/6 = "im0001744.jpg"
+/7 = "im0001631.jpg"
+</item>
+<item picset_267_29>
+/1 = "im0001737.jpg"
+/2 = "im0001402.jpg"
+/3 = "im0001820.jpg"
+/4 = "im0001719.jpg"
+/5 = "im0001937.jpg"
+/6 = "im0001185.jpg"
+/7 = "im0001734.jpg"
+</item>
+<item picset_67_30>
+/1 = "im0002415.jpg"
+/2 = "im0002141.jpg"
+/3 = "im0000638.jpg"
+/4 = "im0000721.jpg"
+/5 = "im0000550.jpg"
+/6 = "im0001744.jpg"
+/7 = "im0001631.jpg"
+</item>
+<item picset_133_30>
+/1 = "im0001737.jpg"
+/2 = "im0001402.jpg"
+/3 = "im0001820.jpg"
+/4 = "im0001719.jpg"
+/5 = "im0001937.jpg"
+/6 = "im0001185.jpg"
+/7 = "im0001734.jpg"
+</item>
+<item picset_267_30>
+/1 = "im0003988.jpg"
+/2 = "im0002487.jpg"
+/3 = "im0004531.jpg"
+/4 = "im0009091.jpg"
+/5 = "im0001277.jpg"
+/6 = "im0008010.jpg"
+/7 = "im0003315.jpg"
+</item>
+
+
+
+<include>
+/file = "gist.iqx"
+</include>
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************
