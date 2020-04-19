@@ -1,0 +1,65 @@
+﻿**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE PARAMETERS: change editable parameters here
+**************************************************************************************************************
+**************************************************************************************************************
+
+<parameters>
+/fixationduration = 1000
+/is_mturk = true
+/experiment_id = "GIST_BATCH_V1_1_1_MT"
+/skip_practice = false
+/skip_demographics = false
+/show_completion_block = false
+</parameters>
+
+<variables>
+/ group = (1 of 1) (items_133soa = picset_133_1)
+/ groupassignment = groupnumber
+</variables>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	EDITABLE STIMULI: change editable stimuli here
+**************************************************************************************************************
+**************************************************************************************************************
+
+Note: The following needs to be generated using helper-scripts, otherwise you will be typing all day - see helper-scripts generate-inquisit-random_preconfigure.py
+
+***********************
+***********************
+
+
+
+<item picset_267_1>
+/1="SquareCongruent_121.jpg"
+/2="SquareCongruent_122.jpg"
+/3="SquareCongruent_123.jpg"
+/4="SquareCongruent_124.jpg"
+/5="SquareCongruent_125.jpg"
+/6="SquareCongruent_126.jpg"
+/7="SquareCongruent_127.jpg"
+/8="SquareCongruent_128.jpg"
+/9="SquareCongruent_129.jpg"
+/10="SquareCongruent_130.jpg"
+/11="SquareIncongruent_131.jpg"
+/12="SquareIncongruent_132.jpg"
+/13="SquareIncongruent_133.jpg"
+/14="SquareIncongruent_134.jpg"
+/15="SquareIncongruent_135.jpg"
+/16="SquareIncongruent_136.jpg"
+/17="SquareIncongruent_137.jpg"
+/18="SquareIncongruent_138.jpg"
+/19="SquareIncongruent_139.jpg"
+/20="SquareIncongruent_140.jpg"
+</item>
+
+
+
+<include>
+/ file = "gist_267_1.iqx"
+</include>
+
+**************************************************************************************************************
+												End of File
+**************************************************************************************************************
