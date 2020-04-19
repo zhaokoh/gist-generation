@@ -1,0 +1,75 @@
+﻿<textbox d1>
+/ maxchars = 100
+/ position = (values.first_col, values.textbox_offset)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+/ required = true
+/ mask = ^([a-zA-Z-]+)$
+</textbox>
+<textbox d2>
+/ maxchars = 100
+/ position = (values.first_col,  values.textbox_offset + values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+/ required = true
+/ mask = ^([a-zA-Z-]+)$
+</textbox>
+<textbox d3>
+/ maxchars = 100
+/ position = (values.first_col, values.textbox_offset + 2*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+/ required = true
+/ mask = ^([a-zA-Z-]+)$
+</textbox>
+<textbox d4>
+/ maxchars = 100
+/ position = (values.first_col, values.textbox_offset + 3*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+/ required = true
+/ mask = ^([a-zA-Z-]+)$
+</textbox>
+<textbox d5>
+/ maxchars = 100
+/ position = (values.first_col, values.textbox_offset + 4*values.textbox_gap)
+/ textboxsize = (values.textbox_width, values.textbox_height)
+/ required = true
+/ mask = ^([a-zA-Z-]+)$
+</textbox>
+
+<radiobuttons rb1>
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb2>
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb3>
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 2*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb4>
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 3*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
+
+<radiobuttons rb5>
+/ options=("Don't Know", "Guess", "Maybe", "Confident", "Very Confident")
+/ required=true
+/ position = (values.second_col, values.radiobuttons_offset + 4*values.radiobuttons_gap)
+/ orientation = horizontal
+/ fontstyle = ("Arial", values.radiobuttons_textsize, false, false, false, false, 5, 0)
+</radiobuttons>
