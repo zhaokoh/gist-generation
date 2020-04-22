@@ -395,6 +395,14 @@ Note: The following represents five masks to be used after the picture stimulus
 </values>
 
 <include>
+/ file = "Calibration.iqx"
+</include>
+
+<include>
+/ file = "schizotypyQuestionnaire.iqx"
+</include>
+
+<include>
 /file = "include_surveypage_inputs.iqx"
 </include>
 
@@ -418,7 +426,7 @@ NOTE: The 11 questions onwards are text to be displayed.
 </surveypage>
 
 <surveypage demographic_page>
-/ caption = "You have now finished the trials. Before you complete the experiment, we would like you to complete the following questions please."
+/ caption = "You have now finished the survey. Before you complete the experiment, we would like you to complete the following questions please."
 / fontstyle =  ("Arial", 3%)
 / showquestionnumbers = false
 / showpagenumbers = false
@@ -426,9 +434,99 @@ NOTE: The 11 questions onwards are text to be displayed.
 / navigationbuttonsize = (20, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (35%,  values.demo_starting_y_offset + 10*values.demo_gap)
+/ response = correct
 / finishlabel = "Complete"
+</surveypage>
+
+<surveypage schizotypy_PG1>
+/ caption = "You have completed the trials. We would now like you to complete our questionnaire."
+/ fontstyle = ("Arial", 3%, true)
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 7%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE1; 2=OLIFE2; 3=OLIFE3; 4=OLIFE4; 5=OLIFE5; 6=OLIFE6]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
 / response = correct
 </surveypage>
+
+<surveypage schizotypy_PG2>
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 7%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE7; 2=OLIFE8; 3=OLIFE9; 4=OLIFE10; 5=OLIFE11; 6=OLIFE12]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
+/ response = correct
+</surveypage>
+
+<surveypage schizotypy_PG3>
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 7%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE13; 2=OLIFE14; 3=OLIFE15; 4=OLIFE16; 5=OLIFE17; 6=OLIFE18]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
+/ response = correct
+</surveypage>
+
+<surveypage schizotypy_PG4>
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 7%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE19; 2=OLIFE20; 3=OLIFE21; 4=OLIFE22; 5=OLIFE23; 6=OLIFE24]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
+/ response = correct
+</surveypage>
+
+<surveypage schizotypy_PG5>
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 7%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE25; 2=OLIFE26; 3=OLIFE27; 4=OLIFE28; 5=OLIFE29; 6=OLIFE30]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
+/ response = correct
+</surveypage>
+
+
+<surveypage schizotypy_PG6>
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 7%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE31; 2=OLIFE32; 3=OLIFE33; 4=OLIFE34; 5=OLIFE35; 6=OLIFE36]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
+/ response = correct
+</surveypage>
+
+
+<surveypage schizotypy_PG7>
+/ itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
+/ itemspacing = 6%
+/ showquestionnumbers = false
+/ showpagenumbers = false
+/ questions = [1=OLIFE37; 2=OLIFE38; 3=OLIFE39; 4=OLIFE40; 5=OLIFE41; 6=OLIFE42; 7=OLIFE43]
+/ navigationbuttonsize = (13, 4)
+/ navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
+/ nextbuttonposition = (85%, 83%)
+/ response = correct
+/ finishlabel = "Complete"
+</surveypage>
+
 
 <trial error>
 / stimulusframes = [1 = survey_error]
@@ -629,6 +727,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 / skip = [parameters.is_mturk == false]
 </block>
 
+<block calibration>
+/ trials = [1=Calibration_instruction_page1]
+/ screencolor = white
+</block>
+
 <block completion>
 /trials = [1=mturk_completion_code]
 / preinstructions = (thanks)
@@ -638,6 +741,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 <block completion_block>
 / preinstructions = (complete_block)
 / skip = [parameters.show_completion_block == false]
+</block>
+
+<block schizotypy>
+/ trials = [1=surveypage.schizotypy_PG1; 2=surveypage.schizotypy_PG2; 3=surveypage.schizotypy_PG3; 4=surveypage.schizotypy_PG4;
+5=surveypage.schizotypy_PG5; 6=surveypage.schizotypy_PG6; 7=surveypage.schizotypy_PG7]
 </block>
 
 <block demographics>
@@ -656,7 +764,7 @@ NOTE: /blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = dem
 
 <expt>
 /onexptend = [values.completed = 1]
-/blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = demographics; 6 = completion_block; 7 = completion]
+/blocks = [ 1 = intro; 2 = consent; 3 = calibration; 4 = practice_block; 5 = block1; 6 = schizotypy; 7 = demographics; 8 = completion_block; 9 = completion]
 </expt>
 
 **************************************************************************************************************
