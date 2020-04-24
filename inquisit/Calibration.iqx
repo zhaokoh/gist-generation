@@ -42,7 +42,7 @@ Calibration Operation
 a similar width with the black line at the center of the screen 
 Press SPACE button to continue when you finish")
 / fontstyle = ("Arial", 3%, true)
-/ position = (50%,93%)
+/ position = (50%,80%)
 / txbgcolor = (127,127,127)
 / txcolor = yellow
 </text>

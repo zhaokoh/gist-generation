@@ -7,7 +7,7 @@
 <parameters>
 /fixationduration = 1000
 /is_mturk = true
-/experiment_id = "GIST_BATCH_V1_1_1_MT"
+/experiment_id = "GIST_BATCH_V1_267_1_MT"
 /skip_practice = false
 /skip_demographics = false
 /show_completion_block = false

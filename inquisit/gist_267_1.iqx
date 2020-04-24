@@ -446,17 +446,18 @@ NOTE: The 11 questions onwards are text to be displayed.
 </surveypage>
 
 <surveypage schizotypy_PG1>
-/ caption = "You have completed the trials. We would now like you to complete our questionnaire."
+/ caption = "You have completed the trials. We would now like you to complete our questionnaire. This will take approximately 10 minutes."
 / fontstyle = ("Arial", 3%, true)
 / itemfontstyle = ("Arial", 2%, false, true, false, false, 5, 0)
 / itemspacing = 5%
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE1; 2=OLIFE2; 3=OLIFE3; 4=OLIFE4; 5=OLIFE5; 6=OLIFE6]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
+/ finishlabel = "Finish Page 1 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_1_score = values.OLIFE_subscale_1_score + radiobuttons.OLIFE1.selectedvalue + radiobuttons.OLIFE2.selectedvalue + radiobuttons.OLIFE3.selectedvalue + 
 	radiobuttons.OLIFE4.selectedvalue + radiobuttons.OLIFE5.selectedvalue + radiobuttons.OLIFE6.selectedvalue
@@ -469,10 +470,11 @@ NOTE: The 11 questions onwards are text to be displayed.
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE7; 2=OLIFE8; 3=OLIFE9; 4=OLIFE10; 5=OLIFE11; 6=OLIFE12]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
+/ finishlabel = "Finish Page 2 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_1_score = values.OLIFE_subscale_1_score + radiobuttons.OLIFE7.selectedvalue + radiobuttons.OLIFE8.selectedvalue + radiobuttons.OLIFE9.selectedvalue +
 radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiobuttons.OLIFE12.selectedvalue	
@@ -485,10 +487,11 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE13; 2=OLIFE14; 3=OLIFE15; 4=OLIFE16; 5=OLIFE17; 6=OLIFE18]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
+/ finishlabel = "Finish Page 3 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_2_score = values.OLIFE_subscale_2_score + radiobuttons.OLIFE13.selectedvalue + radiobuttons.OLIFE14.selectedvalue + radiobuttons.OLIFE15.selectedvalue +
 	radiobuttons.OLIFE16.selectedvalue + radiobuttons.OLIFE17.selectedvalue + radiobuttons.OLIFE18.selectedvalue
@@ -501,10 +504,11 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE19; 2=OLIFE20; 3=OLIFE21; 4=OLIFE22; 5=OLIFE23; 6=OLIFE24]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
+/ finishlabel = "Finish Page 4 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_2_score = values.OLIFE_subscale_2_score + radiobuttons.OLIFE19.selectedvalue + radiobuttons.OLIFE20.selectedvalue + radiobuttons.OLIFE21.selectedvalue +
 	radiobuttons.OLIFE22.selectedvalue + radiobuttons.OLIFE23.selectedvalue;
@@ -519,10 +523,11 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE25; 2=OLIFE26; 3=OLIFE27; 4=OLIFE28; 5=OLIFE29; 6=OLIFE30]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
+/ finishlabel = "Finish Page 5 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_3_score = values.OLIFE_subscale_3_score + radiobuttons.OLIFE25.selectedvalue + radiobuttons.OLIFE26.selectedvalue + radiobuttons.OLIFE27.selectedvalue +
 	radiobuttons.OLIFE28.selectedvalue + radiobuttons.OLIFE29.selectedvalue
@@ -536,10 +541,11 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE31; 2=OLIFE32; 3=OLIFE33; 4=OLIFE34; 5=OLIFE35; 6=OLIFE36]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
+/ finishlabel = "Finish Page 6 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_3_score = values.OLIFE_subscale_3_score + radiobuttons.OLIFE31.selectedvalue + radiobuttons.OLIFE32.selectedvalue + radiobuttons.OLIFE33.selectedvalue;
 	
@@ -554,11 +560,11 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / showquestionnumbers = false
 / showpagenumbers = false
 / questions = [1=OLIFE37; 2=OLIFE38; 3=OLIFE39; 4=OLIFE40; 5=OLIFE41; 6=OLIFE42; 7=OLIFE43]
-/ navigationbuttonsize = (13, 4)
+/ navigationbuttonsize = (15, 4)
 / navigationbuttonfontstyle = ("Arial", 2%, true, false, false, false, 5, 0)
 / nextbuttonposition = (85%, 83%)
 / response = correct
-/ finishlabel = "Complete"
+/ finishlabel = "Finish Page 7 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_4_score = values.OLIFE_subscale_4_score + radiobuttons.OLIFE37.selectedvalue + radiobuttons.OLIFE38.selectedvalue + radiobuttons.OLIFE39.selectedvalue +
 	radiobuttons.OLIFE40.selectedvalue + radiobuttons.OLIFE41.selectedvalue + radiobuttons.OLIFE42.selectedvalue + radiobuttons.OLIFE43.selectedvalue
