@@ -530,7 +530,7 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / finishlabel = "Finish Page 5 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_3_score = values.OLIFE_subscale_3_score + radiobuttons.OLIFE25.selectedvalue + radiobuttons.OLIFE26.selectedvalue + radiobuttons.OLIFE27.selectedvalue +
-	radiobuttons.OLIFE28.selectedvalue + radiobuttons.OLIFE29.selectedvalue
+	radiobuttons.OLIFE28.selectedvalue + radiobuttons.OLIFE29.selectedvalue + radiobuttons.OLIFE30.selectedvalue
 ]
 </surveypage>
 
@@ -808,7 +808,7 @@ NOTE: /blocks = [1 = intro; 2 = consent; 3 = practice_block; 4 = block1; 5 = dem
 
 <expt>
 /onexptend = [values.completed = 1]
-/blocks = [ 1 = intro; 2 = consent; 3 = calibration; 4 = practice_block; 5 = block1; 6 = schizotypy; 7 = demographics; 8 = completion_block; 9 = completion]
+/blocks = [  1 = intro; 2 = consent; 3 = calibration; 4 = practice_block; 5 = block1; 6 = schizotypy; 7 = demographics; 8 = completion_block; 9 = completion]
 </expt>
 
 **************************************************************************************************************

@@ -530,7 +530,7 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 / finishlabel = "Finish Page 5 of 7"
 / ontrialend = [
 	values.OLIFE_subscale_3_score = values.OLIFE_subscale_3_score + radiobuttons.OLIFE25.selectedvalue + radiobuttons.OLIFE26.selectedvalue + radiobuttons.OLIFE27.selectedvalue +
-	radiobuttons.OLIFE28.selectedvalue + radiobuttons.OLIFE29.selectedvalue
+	radiobuttons.OLIFE28.selectedvalue + radiobuttons.OLIFE29.selectedvalue + radiobuttons.OLIFE30.selectedvalue
 ]
 </surveypage>
 
