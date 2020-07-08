@@ -1,0 +1,5 @@
+build	date	time	subject	blockcode	blocknum	trialcode	trialnum	stimulusonset1	values.est_soa	values.est_soa2	values.est_soa3	values.est_soa4	values.est_soa5	values.img_num	values.img_file	values.soa	values.completion_code	response	latency	values.OLIFE_subscale_1_score	values.OLIFE_subscale_2_score	values.OLIFE_subscale_3_score	values.OLIFE_subscale_4_score
+5.0.14.0	070820	18:19:59	1	calibration	3	calibration_instruction_page1	1	-13	0	0	0	0	0	0		0		57	614	0	0	0	0
+5.0.14.0	070820	18:19:59	1	calibration	3	calibration_instruction_page2	2	-10	0	0	0	0	0	0		0		57	224	0	0	0	0
+5.0.14.0	070820	18:19:59	1	calibration	3	calibration_operate	3	-11	0	0	0	0	0	0		0		57	132	0	0	0	0
+5.0.14.0	070820	18:19:59	1	practice_block	4	practice_pic_67soa	1	-8	67	66	50	67	50	3	SquareIncongruent_043.jpg	67		Ctrl+'Q'	28	0	0	0	0

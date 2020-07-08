@@ -698,7 +698,7 @@ radiobuttons.OLIFE10.selectedvalue + radiobuttons.OLIFE11.selectedvalue + radiob
 	values.img_num = picture.gdg_267soa.currentvalue;
 	values.img_file = picture.gdg_267soa.currentitem;
 	values.soa = 267;
-	values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_267soa.stimulusonset.1;
+	values.est_soa = values.est_soa = picture.mask1.stimulusonset.1 - picture.gdg_267soa.stimulusonset.1;
 	values.est_soa2 = picture.mask2.stimulusonset.1 - picture.mask1.stimulusonset.1;
 	values.est_soa3 = picture.mask3.stimulusonset.1 - picture.mask2.stimulusonset.1;
 	values.est_soa4 = picture.mask4.stimulusonset.1 - picture.mask3.stimulusonset.1;
