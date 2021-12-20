@@ -8,7 +8,7 @@ The experiments built using Inquisit is declarative - i.e. no programming code r
 
 ## Justification of using Inquisit for this project
 
-* Inquisit was chosen because Monash has license to it and can host Inquisit Web experiments.
+* Inquisit was chosen because the University has license and Inquisit can host Inquisit Web experiments.
 * Inquisit timing accuracy is independently tested and verified: https://www.millisecond.com/products/inquisit5/timing.aspx, saving us to measure the timing accuracy if we choose another framework such as jspsych. 
 * Integrates well with MTurk via survey link and approved by Amazon as a MTurk external platform.
 
@@ -19,8 +19,6 @@ The experiments built using Inquisit is declarative - i.e. no programming code r
 * Inquisit Lab 5 installed on your machine (I am using version 5.0.14.0 on Mac OS) - there is another way to access Inquisit using [Monash vLab](https://www.monash.edu/research-portal/vlab/applications/inquisit/inquisit-lab) but could be slower and exchange files between the virtual machine and local could be cumbersome. [Monash Research Portal](https://www.monash.edu/research-portal/vlab/applications/inquisit) also contains information about Inquisit installation.
 
 * Get a licence for Inquisit Lab - once installed, follow the instructions to get a registration key.
-
-* Apparently there are limited licence in Monash for Inquisit Web, so we may have to share the same account. Please let me know if you need to access Inqusit Web and I can share the login details with you.
   
 ## Steps to run the experiment using Inquisit Lab (local - not integrated with MTurk)
 
